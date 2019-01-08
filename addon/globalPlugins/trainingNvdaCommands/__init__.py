@@ -8,6 +8,9 @@ from .game import Game
 import globalPluginHandler
 #from logHandler import log
 import os, sys
+import addonHandler
+addonHandler.initTranslation()
+
 CURRENT_DIR= os.path.abspath(os.path.dirname(__file__))
 #importing bs4 is borrowed from textInformation addon by Carter Temm.
 sys.path.append(CURRENT_DIR)

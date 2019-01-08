@@ -13,9 +13,11 @@ except ImportError:
 	import pickle
 
 import random
+import addonHandler
+addonHandler.initTranslation()
 
 #current directory
-CURRENT_DIR= os.path.abspath(os.path.dirname(__file__))
+CURRENT_DIR= os.path.abspath(os.path.dirname(__file__)).decode("mbcs")
 #locale path of keyCommands.html in Nvda documentation files.
 keyCommands_path= gui.getDocFilePath("keyCommands.html")
 current_lang= os.path.basename(os.path.dirname(keyCommands_path))
