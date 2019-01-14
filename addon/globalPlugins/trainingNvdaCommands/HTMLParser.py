@@ -1,3 +1,5 @@
+#HTMLParser.py
+#python module needed for bs4 to work properly.
 """A parser for HTML and XHTML."""
 
 # This file is based on sgmllib.py, but the API is slightly different.

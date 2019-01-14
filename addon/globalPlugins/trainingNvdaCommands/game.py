@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-#ibrahim hamadeh
-#An addon like game to train nvda commands for desktop and labtop layouts.
+#Copyright (C) 2019 ibrahim hamadeh
 #this addon is under GNU general public license2.0
+#An addon like game to train nvda commands for desktop and labtop layouts.
 
 import wx
 import gui

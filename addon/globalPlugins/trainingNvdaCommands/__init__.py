@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-#trainingNvdaCommands, ibrahim hamadeh, copyright 2019
+#trainingKeyboardCommands, ibrahim hamadeh, copyright 2019
+#this addon is under GNU general public license2.0, see copying.txt
 #An addon like game to train nvda commands for desktop and labtop layouts.
-#this addon is under GNU general public license2.0
-#bs4 used is Copyright (c) 2004-2017 Leonard Richardson under MIT license.
+#bs4 used in this addon is Copyright (c) 2004-2017 Leonard Richardson under MIT license.
+#see copying.txt in bs4 package.
 
 from .game import Game
 import globalPluginHandler

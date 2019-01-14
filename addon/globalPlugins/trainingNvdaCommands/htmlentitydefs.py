@@ -1,3 +1,5 @@
+#htmlentitydefs.py
+#python module needed for bs4 to work properly.
 """HTML character entity references."""
 
 # maps the HTML entity name to the Unicode code point

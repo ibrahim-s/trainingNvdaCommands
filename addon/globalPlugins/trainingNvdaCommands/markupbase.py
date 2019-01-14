@@ -1,3 +1,5 @@
+#markupbase.py
+#python module needed for bs4 to work properly.
 """Shared support for scanning document type declarations in HTML and XHTML.
 
 This module is used as a foundation for the HTMLParser and sgmllib
