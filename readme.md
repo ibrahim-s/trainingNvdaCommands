@@ -1,11 +1,14 @@
-# Training NVDA commands #
+# Training Keyboard commands #
 
 Author: Ibrahim Hamadeh  
-Download [development version 1.0](https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.0/trainingNvdaCommands-1.0-dev.nvda-addon)  
+Download [development version 1.1](https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.1/trainingKeyboardCommands-1.1-dev.nvda-addon)  
 
 This addon is aimed to train NVDA commands in a game like way, for either keyboard layout modes  
 desktop or laptop layout  
-All commands data is scraped from keyCommands.html file in locale documentation folder in NVDA.
+All commands data is scraped from keyCommands.html file in locale documentation folder in NVDA.  
+This addon does not have any default gesture or shortcut  
+You have to assign a specific gesture to it via:  
+NVDA menu>preferences>inputGestures>trainingKeyboardCommands.  
 
 ## Usage ##
 
@@ -16,5 +19,3 @@ All commands data is scraped from keyCommands.html file in locale documentation 
 *	at any time if you want to exit, you will be asked if you want to save the remaining questions for next round  
 *	if in later time you choose a layout wit saved questions, you will be asked if you want to resume the remaining questions from previous round  
 *	answering all questions, about 88 for each layout, you will be declared a winner deserving NVDA cup.  
-*	You can associate a shortcut or command to this addon from  
-Nvda menu/preferences/input gestures/TrainingNvda commands.  
