@@ -11,17 +11,18 @@ addon_info = {
 	# for previously unpublished addons, please follow the community guidelines at:
 	# https://bitbucket.org/nvdaaddonteam/todo/raw/master/guideLines.txt
 	# add-on Name, internal for nvda
-	"addon_name" : "trainingNvdaCommands",
+	"addon_name" : "trainingKeyboardCommands",
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on to be shown on installation and add-on information.
-	"addon_summary" : _("Training NVDA Commands"),
+	"addon_summary" : _("Training Keyboards Commands"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("""This addon allows you to train NVDA commands in game like way, for either desktop or laptop layout mode.
 For every commands and it's description, you have to choose the right keys or answer specific to it.
-And if exiting before the end, you can save the remaining questions to resume them in later time."""),
+And if exiting before the end, you can save the remaining questions to resume them in later time.
+In order to use the addon, you have to assign a gesture to it via NVDAmenu>preferences>inputGestures>trainingKeyboardCommands."""),
 	# version
-	"addon_version" : "1.0-dev",
+	"addon_version" : "1.1-dev",
 	# Author(s)
 	"addon_author" : u"ibrahim hamadeh <ibra.hamadeh@hotmail.com>",
 	# URL for the add-on documentation support

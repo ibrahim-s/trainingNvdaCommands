@@ -85,7 +85,7 @@ def scrapCommandsAndMakeFile(filename):
 PLAYING = None
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-	scriptCategory = _("Training Nvda Commands")
+	scriptCategory = _("Training Keyboard Commands")
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
