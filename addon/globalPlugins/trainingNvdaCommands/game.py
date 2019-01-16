@@ -5,6 +5,7 @@
 
 import wx
 import gui
+import config
 import os
 #for compatibility with python3
 try:
@@ -74,7 +75,7 @@ class Game(wx.Dialog):
 		vbox.Add((-1, 25))
 
 		hbox4 = wx.BoxSizer(wx.HORIZONTAL)
-		layoutOptions=['Desktop layout commands','Labtop layout commands']
+		layoutOptions=['Desktop layout commands','Laptop layout commands']
 		self.layoutObtionsRadio=wx.RadioBox(panel, -1, "Choose keyboard layout to train commands", size= wx.DefaultSize,choices= layoutOptions, majorDimension=0, style= wx.RA_SPECIFY_COLS)
 		hbox4.Add(self.layoutObtionsRadio, proportion=1)
 		vbox.Add(hbox4, flag=wx.EXPAND|wx.LEFT|wx.RIGHT|wx.TOP, border=10)
@@ -99,6 +100,9 @@ class Game(wx.Dialog):
 		self.retreaveData()
 		self.begin.SetDefault()
 		self.Centre()
+		current_layout= config.conf['keyboard']['keyboardLayout']
+		selec= 0 if current_layout== 'desktop' else 1
+		self.layoutObtionsRadio.SetSelection(selec) 
 		self.layoutObtionsRadio.SetFocus()
 		self.Raise()
 		self.Show()  
