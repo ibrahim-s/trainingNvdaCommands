@@ -1,7 +1,7 @@
 # Training Keyboard commands #
 
 Author: Ibrahim Hamadeh  
-Download [development version 1.1](https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.1/trainingKeyboardCommands-1.1-dev.nvda-addon)  
+Download [development version 1.2](https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.2/trainingKeyboardCommands-1.2-dev.nvda-addon)  
 
 This addon is aimed to train NVDA commands in a game like way, for either keyboard layout modes  
 desktop or laptop layout  
@@ -19,3 +19,12 @@ NVDA menu>preferences>inputGestures>trainingKeyboardCommands.
 *	at any time if you want to exit, you will be asked if you want to save the remaining questions for next round  
 *	if in later time you choose a layout wit saved questions, you will be asked if you want to resume the remaining questions from previous round  
 *	answering all questions, about 88 for each layout, you will be declared a winner deserving NVDA cup.  
+
+### Changes for 1.2 ###
+
+*	select current keyboard layout on start if game.
+*	Add sounds to correct answer, wrong answer, and upon winning the game.
+
+### Changes for 1.1 ###
+
+*	Initial version.

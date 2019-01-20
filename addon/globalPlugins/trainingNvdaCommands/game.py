@@ -6,6 +6,8 @@
 import wx
 import gui
 import config
+import winsound
+import time
 import os
 #for compatibility with python3
 try:
@@ -24,6 +26,8 @@ keyCommands_path= gui.getDocFilePath("keyCommands.html")
 current_lang= os.path.basename(os.path.dirname(keyCommands_path))
 #file path of saved data if the user wishes to save remaining questions
 filepath= os.path.join(CURRENT_DIR, 'savedData', current_lang, 'data.pickle')
+#path of sound files
+sound_path= os.path.join(os.path.dirname(__file__), "..", "..", "sounds")
 
 class QuestionObj():
 	def __init__(self, sublist=[]):
@@ -143,14 +147,20 @@ class Game(wx.Dialog):
 
 	def onOk(self, e):
 		if self.answerObtionsCumbo.GetStringSelection()== self.question.answer and not self.allQuestions:
+			winsound.PlaySound(os.path.join(sound_path, "congratulations.wav"), winsound.SND_ASYNC)
+			time.sleep(9)
 			self.endGameMessage()
 			return
 		if self.answerObtionsCumbo.GetStringSelection()== self.question.answer:
+			winsound.PlaySound(os.path.join(sound_path, "correctAnswer.wav"), winsound.SND_ASYNC)
+			time.sleep(3.5)
 			self.score+=1
 			self.scoreText.SetLabel("Your Score: {}/{}".format(self.score, self.totalScore))
 			self.displayQuestion()
 		else:
 			self.allQuestions.insert(0, self.question)
+			winsound.PlaySound(os.path.join(sound_path, "incorrectAnswer.wav"), winsound.SND_ASYNC)
+			time.sleep(1)
 			self.errorMessage()
 
 	def errorMessage(self):
@@ -159,7 +169,8 @@ class Game(wx.Dialog):
 		gui.messageBox(message, 
 		# Translators: Title of message dialog.
 		_("Error Message"), 
-		wx.OK|wx.ICON_INFORMATION)
+		#wx.OK|wx.ICON_INFORMATION)
+		wx.OK)
 		self.displayQuestion()
 
 	def endGameMessage(self):
