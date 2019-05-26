@@ -38,6 +38,7 @@ class QuestionObj():
 
 	@staticmethod
 	def populateList(currentList):
+		''' Make list of question objects out of the list containing the necessary informations for that. '''
 		lst=[]
 		tempList= currentList[:]
 		for i in tempList:
@@ -60,7 +61,8 @@ class Game(wx.Dialog):
 		panel = wx.Panel(self)
 		vbox = wx.BoxSizer(wx.VERTICAL)
 		hbox1 = wx.BoxSizer(wx.HORIZONTAL)
-		self.scoreText = wx.StaticText(panel, label='Your Score: 0')
+		# Translators: label for the score value at the beginning of the game
+		self.scoreText = wx.StaticText(panel, label=_('Your Score: 0'))
 		hbox1.Add(self.scoreText)
 		vbox.Add(hbox1, flag=wx.LEFT | wx.TOP, border=10)
 		vbox.Add((-1, 10))
@@ -71,7 +73,8 @@ class Game(wx.Dialog):
 		vbox.Add((-1, 25))
 
 		hbox3 = wx.BoxSizer(wx.HORIZONTAL)
-		staticListText=wx.StaticText(panel, -1, label= 'Choose Obtion')
+		# Translators: label for the cumbo box of options for correct answer
+		staticListText=wx.StaticText(panel, -1, label= _('Choose Option'))
 		self.answerObtionsCumbo= wx.Choice(panel, -1, choices= [])
 		hbox3.Add(staticListText,0, wx.ALL, 10)
 		hbox3.Add(self.answerObtionsCumbo, 1, flag=wx.RIGHT, border=10)
@@ -79,18 +82,27 @@ class Game(wx.Dialog):
 		vbox.Add((-1, 25))
 
 		hbox4 = wx.BoxSizer(wx.HORIZONTAL)
-		layoutOptions=['Desktop layout commands','Laptop layout commands']
-		self.layoutObtionsRadio=wx.RadioBox(panel, -1, "Choose keyboard layout to train commands", size= wx.DefaultSize,choices= layoutOptions, majorDimension=0, style= wx.RA_SPECIFY_COLS)
+		# Translators: label for the two options of radio box, desktop and laptop layout
+		layoutOptions=[_('Desktop layout commands'), _('Laptop layout commands')]
+		self.layoutObtionsRadio=wx.RadioBox(panel, -1, 
+		# Translators: label of radio box to choose type of keyboard commands to play
+		_("Choose keyboard layout to train commands"), size= wx.DefaultSize,choices= layoutOptions, majorDimension=0, style= wx.RA_SPECIFY_COLS)
 		hbox4.Add(self.layoutObtionsRadio, proportion=1)
 		vbox.Add(hbox4, flag=wx.EXPAND|wx.LEFT|wx.RIGHT|wx.TOP, border=10)
 		vbox.Add((-1, 10))
 
 		hbox5 = wx.BoxSizer(wx.HORIZONTAL)
-		self.ok = wx.Button(panel, label='Ok', size=(70, 30))
+		self.ok = wx.Button(panel, 
+		# Translators: label of OK button
+		label=_('Ok'), size=(70, 30))
 		hbox5.Add(self.ok)
-		self.begin = wx.Button(panel, label='Begin Play', size=(70, 30))
+		self.begin = wx.Button(panel, 
+		# Translators: label ob Begin Play button
+		label= _('Begin Play'), size=(70, 30))
 		hbox5.Add(self.begin, flag=wx.EXPAND|wx.BOTTOM, border=5)
-		exit= wx.Button(panel, wx.ID_CANCEL, "Exit", size=(70, 30))
+		exit= wx.Button(panel, wx.ID_CANCEL, 
+		# Translators: label of Exit button
+		_('Exit'), size=(70, 30))
 		hbox5.Add(exit)
 		vbox.Add(hbox5, flag=wx.ALIGN_RIGHT|wx.RIGHT, border=10)
 		panel.SetSizer(vbox)
@@ -103,11 +115,12 @@ class Game(wx.Dialog):
 		self.hideControls(self.scoreText, self.tcQuestion, self.answerObtionsCumbo,  self.ok)
 		self.retreaveData()
 		self.begin.SetDefault()
-		self.Centre()
+		#setting the selected layout to the current layout of the computer
 		current_layout= config.conf['keyboard']['keyboardLayout']
 		selec= 0 if current_layout== 'desktop' else 1
 		self.layoutObtionsRadio.SetSelection(selec) 
 		self.layoutObtionsRadio.SetFocus()
+		self.Centre()
 		self.Raise()
 		self.Show()  
 
@@ -155,7 +168,8 @@ class Game(wx.Dialog):
 			winsound.PlaySound(os.path.join(sound_path, "correctAnswer.wav"), winsound.SND_ASYNC)
 			time.sleep(3.5)
 			self.score+=1
-			self.scoreText.SetLabel("Your Score: {}/{}".format(self.score, self.totalScore))
+			# Translators: label for score value
+			self.scoreText.SetLabel(_("Your Score: {}/{}").format(self.score, self.totalScore))
 			self.displayQuestion()
 		else:
 			self.allQuestions.insert(0, self.question)
@@ -169,14 +183,14 @@ class Game(wx.Dialog):
 		gui.messageBox(message, 
 		# Translators: Title of message dialog.
 		_("Error Message"), 
-		#wx.OK|wx.ICON_INFORMATION)
 		wx.OK)
 		self.displayQuestion()
 
 	def endGameMessage(self):
 		self.tcQuestion.Clear()
 		self.score=0
-		self.scoreText.SetLabel("Your Score: %d"%self.score)
+		# Translators: label of score
+		self.scoreText.SetLabel(_("Your Score: %d")%self.score)
 		if self.layoutMode in self.savedData:
 			self.savedData.pop(self.layoutMode)
 		if self.savedData:
@@ -192,7 +206,8 @@ class Game(wx.Dialog):
 		_("End Of Game "), 
 		wx.OK|wx.ICON_INFORMATION)
 		self.hideControls(self.scoreText, self.tcQuestion, self.answerObtionsCumbo, self.ok)
-		self.layoutObtionsRadio.SetLabel("Choose layout and play again")
+		# Translators: label of radio box to play again
+		self.layoutObtionsRadio.SetLabel(_("Choose layout and play again"))
 		self.showControls(self.layoutObtionsRadio, self.begin)
 		self.begin.SetDefault()
 		self.layoutObtionsRadio.SetFocus()
@@ -224,7 +239,7 @@ class Game(wx.Dialog):
 			self.allQuestions= self.savedData[self.layoutMode]['remainingQuestions']
 			self.score= self.savedData[self.layoutMode]['score']
 			self.totalScore= self.savedData[self.layoutMode]['totalScore']
-			self.scoreText.SetLabel("Your score: {}/{}".format(self.score, self.totalScore))
+			self.scoreText.SetLabel(_("Your score: {}/{}").format(self.score, self.totalScore))
 		else:
 			import commandLists
 			currentList= commandLists.desktopList if self.layoutObtionsRadio.GetSelection()== 0 else commandLists.laptopList

@@ -9,6 +9,7 @@ from .game import Game
 import globalPluginHandler
 #from logHandler import log
 import os, sys
+import queueHandler
 import addonHandler
 addonHandler.initTranslation()
 
@@ -26,15 +27,16 @@ import gui
 keyCommandsFile= gui.getDocFilePath("keyCommands.html")
 
 def readFile(filepath):
+	''' reading the file that contains the required data and returning its html source as a string.'''
 	with open(filepath, 'r') as f:
 		html= f.read()
 	return html
 
 def populateOptionsAndReturnList(lst, lst_all):
-	"""Adding to obtions or answers list three random incorrect commands, beside the correct command already there.
+	'''Adding to obtions or answers list three random incorrect commands, beside the correct command already there.
 	lst is a list of questions data, each element of it is a tuple, first item of it is the question and the second item is a list containing one item which is the correct answer.
 	lst_all is a lis containing all scraped commands.
-	"""
+	'''
 	result= []
 	for question in lst:
 		#the lis containing only the right command, and we want to add to it 3 incorrect command
@@ -48,9 +50,9 @@ def populateOptionsAndReturnList(lst, lst_all):
 		result.append(question)
 	return result
 
-def scrapCommandsAndMakeFile(filename):
-	"""filename is the fi we want to write in it the two lists desktop and laptop scraped data.
-	"""
+def scrapCommandsAndMakeFile():
+	'''make the file commandLists.py, in which we want to write in it the two lists desktop and laptop scraped data.
+	'''
 	soup = BeautifulSoup(readFile(keyCommandsFile), 'html.parser')
 	allCommands= []
 	desktopQuestions= []
@@ -62,22 +64,22 @@ def scrapCommandsAndMakeFile(filename):
 		for row in rows:
 			cells= row.find_all('td')
 			if len(cells) in (4,5):
-				deskQuestion=(cells[0].string+';\nDescription:\n'+cells[-1].string, [cells[1].string])
-				labQuestion= (cells[0].string +';\nDescription:\n'+cells[-1].string, [cells[2].string])
+				deskQuestion=(cells[0].get_text() + ';\nDescription:\n'+cells[-1].get_text(), [cells[1].get_text()])
+				labQuestion= (cells[0].get_text() +';\nDescription:\n'+cells[-1].get_text(), [cells[2].get_text()])
 				desktopQuestions.append(deskQuestion)
 				labtopQuestions.append(labQuestion)
-				allCommands.append(cells[1].string)
-				allCommands.append(cells[2].string)
+				allCommands.append(cells[1].get_text())
+				allCommands.append(cells[2].get_text())
 			if len(cells)==3:
-				desktopQuestions.append((cells[0].string+';\nDescription:\n'+cells[-1].string, [cells[1].string]))
-				labtopQuestions.append((cells[0].string+';\nDescription:\n'+cells[-1].string, [cells[1].string]))
-				allCommands.append(cells[1].string)
+				desktopQuestions.append((cells[0].get_text() + ';\nDescription:\n'+cells[-1].get_text(), [cells[1].get_text()]))
+				labtopQuestions.append((cells[0].get_text() + ';\nDescription:\n'+cells[-1].get_text(), [cells[1].get_text()]))
+				allCommands.append(cells[1].get_text())
 	s=set(allCommands)
 	allCommands=list(s)
 	l1= populateOptionsAndReturnList(desktopQuestions, allCommands)
 	l2= populateOptionsAndReturnList(labtopQuestions, allCommands)
 	#writing the two lists to a file.
-	with open(os.path.join(CURRENT_DIR, filename), 'wb') as f:
+	with open(os.path.join(CURRENT_DIR, 'commandLists.py'), 'wb') as f:
 		f.write('desktopList= '+str(l1))
 		f.write('\n')
 		f.write('laptopList= '+str(l2))
@@ -89,7 +91,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
-		scrapCommandsAndMakeFile('commandLists.py')
+		queueHandler.queueFunction(queueHandler.eventQueue, scrapCommandsAndMakeFile)
 
 	def script_startGame(self, gesture):
 		global PLAYING
@@ -99,4 +101,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			PLAYING.Raise()
 	# Translators: Message displayed in input help mode.
-	script_startGame.__doc__= _("Displays trainingNvdaCommands game dialog.")
+	script_startGame.__doc__= _("Display training keyboard Commands game dialog.")

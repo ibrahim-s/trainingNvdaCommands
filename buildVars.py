@@ -22,7 +22,7 @@ For every commands and it's description, you have to choose the right keys or an
 And if exiting before the end, you can save the remaining questions to resume them in later time.
 In order to use the addon, you have to assign a gesture to it via NVDAmenu>preferences>inputGestures>trainingKeyboardCommands."""),
 	# version
-	"addon_version" : "1.2-dev",
+	"addon_version" : "1.3-dev",
 	# Author(s)
 	"addon_author" : u"ibrahim hamadeh <ibra.hamadeh@hotmail.com>",
 	# URL for the add-on documentation support
@@ -30,9 +30,9 @@ In order to use the addon, you have to assign a gesture to it via NVDAmenu>prefe
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
 	# Minimum NVDA version supported (e.g. "2018.3")
-	"addon_minimumNVDAVersion" : "2017.3",
+	"addon_minimumNVDAVersion" : "2017.3.0",
 	# Last NVDA version supported/tested (e.g. "2018.4", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion" : "2019.1",
+	"addon_lastTestedNVDAVersion" : "2019.2.0",
 	# Add-on update channel (default is stable or None)
 	"addon_updateChannel" : None,
 }
@@ -42,7 +42,7 @@ import os.path
 
 # Define the python files that are the sources of your add-on.
 # You can use glob expressions here, they will be expanded.
-pythonSources = [os.path.join("addon", "globalPlugins", "trainingNvdaCommands", "*.py"), ]
+pythonSources = [os.path.join("addon", "globalPlugins", "trainingKeyboardCommands", "*.py"), ]
 
 # Files that contain strings for translation. Usually your python sources
 i18nSources = pythonSources + ["buildVars.py"]
