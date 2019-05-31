@@ -1,7 +1,7 @@
 # التدرب على أوامر NVDA #
 
 مصمم الإضافة: ابراهيم حمادة  
-رابط الإضافة [development version 1.1](https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.1/trainingKeyboardCommands-1.1-dev.nvda-addon)  
+رابط الإضافة [development version 1.1](https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.3dev/trainingKeyboardCommands-1.3-dev.nvda-addon)  
 
 هذه الإضافة تتيح لك التدرب على أوامر NVDA, على طريقة لعبة  
 سواء بالنسبة لاختصارات الحاسوب المكتبي أو المحمول  

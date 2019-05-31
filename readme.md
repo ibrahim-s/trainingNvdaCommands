@@ -1,7 +1,7 @@
 # Training Keyboard commands #
 
 Author: Ibrahim Hamadeh  
-Download [development version 1.1](https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.1/trainingKeyboardCommands-1.1-dev.nvda-addon)  
+Download [development version 1.3](https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.3dev/trainingKeyboardCommands-1.3-dev.nvda-addon)  
 
 This addon is aimed to train NVDA commands in a game like way, for either keyboard layout modes  
 desktop or laptop layout  
