@@ -8,19 +8,20 @@ import gui
 import config
 import winsound
 import time
-import os
+import os, sys
+
 #for compatibility with python3
 try:
-	import cPickle as pickle
-except ImportError:
 	import pickle
+except ImportError:
+	import cPickle as pickle
 
 import random
 import addonHandler
 addonHandler.initTranslation()
 
 #current directory
-CURRENT_DIR= os.path.abspath(os.path.dirname(__file__)).decode("mbcs")
+CURRENT_DIR= os.path.abspath(os.path.dirname(__file__)) if sys.version_info.major == 3 else os.path.abspath(os.path.dirname(__file__)).decode("mbcs")
 #locale path of keyCommands.html in Nvda documentation files.
 keyCommands_path= gui.getDocFilePath("keyCommands.html")
 current_lang= os.path.basename(os.path.dirname(keyCommands_path))
@@ -241,7 +242,8 @@ class Game(wx.Dialog):
 			self.totalScore= self.savedData[self.layoutMode]['totalScore']
 			self.scoreText.SetLabel(_("Your score: {}/{}").format(self.score, self.totalScore))
 		else:
-			import commandLists
+			#importing commandLists that contains the required data
+			from . import commandLists
 			currentList= commandLists.desktopList if self.layoutObtionsRadio.GetSelection()== 0 else commandLists.laptopList
 			self.totalScore= len(currentList)
 			self.allQuestions= QuestionObj.populateList(currentList)

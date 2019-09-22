@@ -9,7 +9,8 @@ from .game import Game
 import globalPluginHandler
 #from logHandler import log
 import os, sys
-import queueHandler
+#import queueHandler
+import wx, core
 import addonHandler
 addonHandler.initTranslation()
 
@@ -79,7 +80,7 @@ def scrapCommandsAndMakeFile():
 	l1= populateOptionsAndReturnList(desktopQuestions, allCommands)
 	l2= populateOptionsAndReturnList(labtopQuestions, allCommands)
 	#writing the two lists to a file.
-	with open(os.path.join(CURRENT_DIR, 'commandLists.py'), 'wb') as f:
+	with open(os.path.join(CURRENT_DIR, 'commandLists.py'), 'w') as f:
 		f.write('desktopList= '+str(l1))
 		f.write('\n')
 		f.write('laptopList= '+str(l2))
@@ -91,7 +92,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
-		queueHandler.queueFunction(queueHandler.eventQueue, scrapCommandsAndMakeFile)
+		#queueHandler.queueFunction(queueHandler.eventQueue, scrapCommandsAndMakeFile)
+#		wx.CallAfter(scrapCommandsAndMakeFile)
+		core.callLater(200, scrapCommandsAndMakeFile)
 
 	def script_startGame(self, gesture):
 		global PLAYING
