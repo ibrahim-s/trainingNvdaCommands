@@ -5,14 +5,9 @@
 #bs4 used in this addon is Copyright (c) 2004-2017 Leonard Richardson under MIT license.
 #see copying.txt in bs4 package.
 
-from .game import Game
 import globalPluginHandler
-#from logHandler import log
 import os, sys
-#import queueHandler
-import wx, core
-import addonHandler
-addonHandler.initTranslation()
+import threading
 
 CURRENT_DIR= os.path.abspath(os.path.dirname(__file__))
 #importing bs4 is borrowed from textInformation addon by Carter Temm.
@@ -21,15 +16,20 @@ import imp
 a, b, c=imp.find_module("bs4")
 BeautifulSoup=imp.load_module("bs4", a, b, c).BeautifulSoup
 del sys.path[-1]
+
 import random
 import gui
+from .game import Game
+
+import addonHandler
+addonHandler.initTranslation()
 
 #path of keyCommands.html in documentation files, taking into consideration nvda language
 keyCommandsFile= gui.getDocFilePath("keyCommands.html")
 
 def readFile(filepath):
 	''' reading the file that contains the required data and returning its html source as a string.'''
-	with open(filepath, 'r') as f:
+	with open(filepath, 'r', encoding= 'utf-8') as f:
 		html= f.read()
 	return html
 
@@ -60,7 +60,7 @@ def scrapCommandsAndMakeFile():
 	labtopQuestions= []
 	tables= soup.find_all('table')
 
-	for table in tables[0:14]+tables[22: 32]:
+	for table in tables[0:15]+tables[23: 33]:
 		rows= table.find_all('tr')[1:]
 		for row in rows:
 			cells= row.find_all('td')
@@ -80,11 +80,12 @@ def scrapCommandsAndMakeFile():
 	l1= populateOptionsAndReturnList(desktopQuestions, allCommands)
 	l2= populateOptionsAndReturnList(labtopQuestions, allCommands)
 	#writing the two lists to a file.
-	with open(os.path.join(CURRENT_DIR, 'commandLists.py'), 'w') as f:
+	with open(os.path.join(CURRENT_DIR, 'commandLists.py'), 'w', encoding= 'utf-8') as f:
 		f.write('desktopList= '+str(l1))
 		f.write('\n')
 		f.write('laptopList= '+str(l2))
 
+# current instance
 PLAYING = None
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
@@ -92,9 +93,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
-		#queueHandler.queueFunction(queueHandler.eventQueue, scrapCommandsAndMakeFile)
-#		wx.CallAfter(scrapCommandsAndMakeFile)
-		core.callLater(200, scrapCommandsAndMakeFile)
+		t= threading.Thread(target= scrapCommandsAndMakeFile)
+		t.setDaemon(True)
+		t.start()
 
 	def script_startGame(self, gesture):
 		global PLAYING

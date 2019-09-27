@@ -9,19 +9,13 @@ import config
 import winsound
 import time
 import os, sys
-
-#for compatibility with python3
-try:
-	import pickle
-except ImportError:
-	import cPickle as pickle
-
+import pickle
 import random
 import addonHandler
 addonHandler.initTranslation()
 
 #current directory
-CURRENT_DIR= os.path.abspath(os.path.dirname(__file__)) if sys.version_info.major == 3 else os.path.abspath(os.path.dirname(__file__)).decode("mbcs")
+CURRENT_DIR= os.path.abspath(os.path.dirname(__file__))
 #locale path of keyCommands.html in Nvda documentation files.
 keyCommands_path= gui.getDocFilePath("keyCommands.html")
 current_lang= os.path.basename(os.path.dirname(keyCommands_path))
@@ -138,7 +132,7 @@ class Game(wx.Dialog):
 			# Translators: Message asking the user if he wishes to save remaining questions, to resume them in a later time.
 			message= _("Do you want to save remaining questions from this round;\nso that you can resume them later?")
 			if gui.messageBox(message, 
-			# Translators: Title of dialog.
+			# Translators: Title of message box.
 			_("Save Game"),
 			wx.YES|wx.NO|wx.ICON_QUESTION)== wx.YES:
 				self.saveGame()
@@ -240,8 +234,10 @@ class Game(wx.Dialog):
 			self.allQuestions= self.savedData[self.layoutMode]['remainingQuestions']
 			self.score= self.savedData[self.layoutMode]['score']
 			self.totalScore= self.savedData[self.layoutMode]['totalScore']
+			# Translators: label of score text upon resuming game
 			self.scoreText.SetLabel(_("Your score: {}/{}").format(self.score, self.totalScore))
 		else:
+		# no resume,  starting game from scratch
 			#importing commandLists that contains the required data
 			from . import commandLists
 			currentList= commandLists.desktopList if self.layoutObtionsRadio.GetSelection()== 0 else commandLists.laptopList
@@ -263,15 +259,9 @@ class Game(wx.Dialog):
 		self.tcQuestion.SetFocus()
 
 	def hideControls(self, *args):
-		try:
-			for control in args:
-				control.Hide()
-		except Exception as e:
-			raise e
+		for control in args:
+			control.Hide()
 
 	def showControls(self, *args):
-		try:
-			for control in args:
-				control.Show()
-		except:
-			pass
+		for control in args:
+			control.Show()
