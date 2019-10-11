@@ -22,7 +22,7 @@ For every commands and it's description, you have to choose the right keys or an
 And if exiting before the end, you can save the remaining questions to resume them in later time.
 In order to use the addon, you have to assign a gesture to it via NVDAmenu>preferences>inputGestures>trainingKeyboardCommands."""),
 	# version
-	"addon_version" : "1.3-dev",
+	"addon_version" : "2.0-dev",
 	# Author(s)
 	"addon_author" : u"ibrahim hamadeh <ibra.hamadeh@hotmail.com>",
 	# URL for the add-on documentation support
@@ -30,9 +30,9 @@ In order to use the addon, you have to assign a gesture to it via NVDAmenu>prefe
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
 	# Minimum NVDA version supported (e.g. "2018.3")
-	"addon_minimumNVDAVersion" : "2017.3.0",
+	"addon_minimumNVDAVersion" : "2019.3.0",
 	# Last NVDA version supported/tested (e.g. "2018.4", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion" : "2019.3.0",
+	"addon_lastTestedNVDAVersion" : "2019.4.0",
 	# Add-on update channel (default is stable or None)
 	"addon_updateChannel" : None,
 }
