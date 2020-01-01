@@ -1,10 +1,11 @@
 # Training Keyboard commands #
 
 *	Author: Ibrahim Hamadeh  
-*	Download [development version][1]  
+*	Download [stable version][1]  
+*	Download [development version][2]  
 *	NVDA compatibility: 2019.3 to 2019.4  
 *	Python compatibility: Python3 only  
-*	For previous versions of NVDA, please use this [Link][2]  
+*	For previous versions of NVDA, please use this [Link][3]  
 
 This addon is aimed to train NVDA commands in a game like way, for either keyboard layout modes  
 desktop or laptop layout  
@@ -37,6 +38,8 @@ NVDA menu>preferences>inputGestures>trainingKeyboardCommands.
 
 *	Initial version.
 
-[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.0dev/trainingKeyboardCommands-2.0-dev.nvda-addon
+[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.0/trainingKeyboardCommands-2.0.nvda-addon
 
-[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.3dev/trainingKeyboardCommands-1.3-dev.nvda-addon
+[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.0dev/trainingKeyboardCommands-2.0-dev.nvda-addon
+
+[3]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.3dev/trainingKeyboardCommands-1.3-dev.nvda-addon
