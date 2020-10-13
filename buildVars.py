@@ -22,7 +22,7 @@ For every commands and it's description, you have to choose the right keys or an
 And if exiting before the end, you can save the remaining questions to resume them in later time.
 In order to use the addon, you have to assign a gesture to it via NVDAmenu>preferences>inputGestures>trainingKeyboardCommands."""),
 	# version
-	"addon_version" : "2.0",
+	"addon_version" : "2.1",
 	# Author(s)
 	"addon_author" : u"ibrahim hamadeh <ibra.hamadeh@hotmail.com>",
 	# URL for the add-on documentation support

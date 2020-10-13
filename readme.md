@@ -24,6 +24,10 @@ NVDA menu>preferences>inputGestures>trainingKeyboardCommands.
 *	if in later time you choose a layout wit saved questions, you will be asked if you want to resume the remaining questions from previous round  
 *	answering all questions, about 88 for each layout, you will be declared a winner deserving NVDA cup.  
 
+### Changes for 2.1 ###
+
+*	Add Russian translation.
+
 ### Changes for 2.0 ###
 
 *	Make the addon compatible with python3 only.  
@@ -38,8 +42,8 @@ NVDA menu>preferences>inputGestures>trainingKeyboardCommands.
 
 *	Initial version.
 
-[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.0/trainingKeyboardCommands-2.0.nvda-addon
+[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.1/trainingKeyboardCommands-2.1.nvda-addon
 
-[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.0dev/trainingKeyboardCommands-2.0-dev.nvda-addon
+[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.1dev/trainingKeyboardCommands-2.1-dev.nvda-addon
 
 [3]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.3dev/trainingKeyboardCommands-1.3-dev.nvda-addon

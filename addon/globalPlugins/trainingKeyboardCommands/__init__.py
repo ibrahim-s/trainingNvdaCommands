@@ -89,6 +89,7 @@ def scrapCommandsAndMakeFile():
 PLAYING = None
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
+	# Translators: Script category for Training Keyboard Commands addon in input gestures dialog.
 	scriptCategory = _("Training Keyboard Commands")
 
 	def __init__(self, *args, **kwargs):
