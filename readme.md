@@ -24,6 +24,10 @@ NVDA menu>preferences>inputGestures>trainingKeyboardCommands.
 *	if in later time you choose a layout wit saved questions, you will be asked if you want to resume the remaining questions from previous round  
 *	answering all questions, about 88 for each layout, you will be declared a winner deserving NVDA cup.  
 
+### Changes for 2.1 ###
+
+Put the Russian translation of addon
+
 ### Changes for 2.0 ###
 
 *	Make the addon compatible with python3 only.  
