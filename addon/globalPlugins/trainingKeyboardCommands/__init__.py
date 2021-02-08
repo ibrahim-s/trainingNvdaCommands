@@ -65,12 +65,16 @@ def scrapCommandsAndMakeFile():
 		for row in rows:
 			cells= row.find_all('td')
 			if len(cells) in (4,5):
-				deskQuestion=(cells[0].get_text() + ';\nDescription:\n'+cells[-1].get_text(), [cells[1].get_text()])
-				labQuestion= (cells[0].get_text() +';\nDescription:\n'+cells[-1].get_text(), [cells[2].get_text()])
+				deskCommand= cells[1].get_text()
+				lapCommand= cells[2].get_text()
+				# If the gesture or command equals "None", replace it with "Unassigned"
+				deskQuestion=(cells[0].get_text() + ';\nDescription:\n'+cells[-1].get_text(), [deskCommand if deskCommand != "None" else "Unassigned"])
+				labQuestion= (cells[0].get_text() +';\nDescription:\n'+cells[-1].get_text(), [lapCommand if lapCommand != "None" else "Unassigned"])
 				desktopQuestions.append(deskQuestion)
 				labtopQuestions.append(labQuestion)
-				allCommands.append(cells[1].get_text())
-				allCommands.append(cells[2].get_text())
+				if deskCommand != "None" or lapCommand != "None":
+					allCommands.append(deskCommand)
+					allCommands.append(lapCommand)
 			if len(cells)==3:
 				desktopQuestions.append((cells[0].get_text() + ';\nDescription:\n'+cells[-1].get_text(), [cells[1].get_text()]))
 				labtopQuestions.append((cells[0].get_text() + ';\nDescription:\n'+cells[-1].get_text(), [cells[1].get_text()]))

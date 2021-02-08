@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #Copyright (C) 2019 ibrahim hamadeh
 #this addon is under GNU general public license2.0
-#An addon like game to train nvda commands for desktop and labtop layouts.
+#An addon like game to train nvda commands for desktop and laptop layouts.
 
 import wx
 import gui
@@ -77,8 +77,11 @@ class Game(wx.Dialog):
 		vbox.Add((-1, 25))
 
 		hbox4 = wx.BoxSizer(wx.HORIZONTAL)
-		# Translators: label for the two options of radio box, desktop and laptop layout
-		layoutOptions=[_('Desktop layout commands'), _('Laptop layout commands')]
+		layoutOptions=[
+		# Translators: label for the options of radio box, for desktop layout
+		_('Desktop layout commands'),
+		# Translators: label for the options of radio box, for laptop layout
+		_('Laptop layout commands')]
 		self.layoutObtionsRadio=wx.RadioBox(panel, -1, 
 		# Translators: label of radio box to choose type of keyboard commands to play
 		_("Choose keyboard layout to train commands"), size= wx.DefaultSize,choices= layoutOptions, majorDimension=0, style= wx.RA_SPECIFY_COLS)
@@ -185,7 +188,7 @@ class Game(wx.Dialog):
 		self.tcQuestion.Clear()
 		self.score=0
 		# Translators: label of score
-		self.scoreText.SetLabel(_("Your Score: %d")%self.score)
+		self.scoreText.SetLabel(_("Your Score: {}").format(self.score))
 		if self.layoutMode in self.savedData:
 			self.savedData.pop(self.layoutMode)
 		if self.savedData:
@@ -208,7 +211,11 @@ class Game(wx.Dialog):
 		self.layoutObtionsRadio.SetFocus()
 
 	def onBegin(self, e):
-		self.layoutMode= 'desktopLayout' if self.layoutObtionsRadio.GetSelection()==0 else 'laptopLayout'
+		# Translators: Desktop layout mode
+		desktopLayout= _("Desktop layout")
+		# Translators: Laptop layout mode
+		laptopLayout= _("Laptop layout")
+		self.layoutMode= desktopLayout if self.layoutObtionsRadio.GetSelection()==0 else laptopLayout
 		if self.layoutMode in self.savedData:
 			# Translators: Message displayed asking the user, if he wants to resume the previous round or not.
 			message= _("Questions preserved of previous round of same layout found,\nDo you want to resume the previous round?")
