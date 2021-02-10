@@ -47,7 +47,7 @@
 
 *	Initial version.
 
-[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.13/trainingKeyboardCommands-2.13.nvda-addon
+[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.2/trainingKeyboardCommands-2.2.nvda-addon
 
 [2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.1dev/trainingKeyboardCommands-2.1-dev.nvda-addon
 

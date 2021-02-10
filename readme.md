@@ -26,7 +26,8 @@ NVDA menu>preferences>inputGestures>trainingKeyboardCommands.
 
 ### Changes for 2.2 ###
 
-*	If the command is displayed as 'None' meaning unassigned, change it to 'Unassigned'.
+*	use latest version of NVDA addon template.  
+*	If the command is displayed as 'None' meaning unassigned, change it to 'Unassigned'.  
 
 ### Changes for 2.1 ###
 
@@ -46,7 +47,7 @@ NVDA menu>preferences>inputGestures>trainingKeyboardCommands.
 
 *	Initial version.
 
-[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.13/trainingKeyboardCommands-2.13.nvda-addon
+[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.2/trainingKeyboardCommands-2.2.nvda-addon
 
 [2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.1dev/trainingKeyboardCommands-2.1-dev.nvda-addon
 
