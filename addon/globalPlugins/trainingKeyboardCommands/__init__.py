@@ -72,14 +72,13 @@ def scrapCommandsAndMakeFile():
 				labQuestion= (cells[0].get_text() +';\nDescription:\n'+cells[-1].get_text(), [lapCommand if lapCommand != "None" else "Unassigned"])
 				desktopQuestions.append(deskQuestion)
 				labtopQuestions.append(labQuestion)
-				if deskCommand != "None" or lapCommand != "None":
-					allCommands.append(deskCommand)
-					allCommands.append(lapCommand)
+				allCommands.append(deskCommand)
+				allCommands.append(lapCommand)
 			if len(cells)==3:
 				desktopQuestions.append((cells[0].get_text() + ';\nDescription:\n'+cells[-1].get_text(), [cells[1].get_text()]))
 				labtopQuestions.append((cells[0].get_text() + ';\nDescription:\n'+cells[-1].get_text(), [cells[1].get_text()]))
 				allCommands.append(cells[1].get_text())
-	s=set(allCommands)
+	s=set(allCommands).discard("None")
 	allCommands=list(s)
 	l1= populateOptionsAndReturnList(desktopQuestions, allCommands)
 	l2= populateOptionsAndReturnList(labtopQuestions, allCommands)

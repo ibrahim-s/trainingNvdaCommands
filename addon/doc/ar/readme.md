@@ -24,8 +24,9 @@
 *	و في وقت لاحق, إذا اخترت نوع إختصاراتيوجد أسءلة محفوظة لها, ستُسأل ما إذا كنت تريد استءناف تلك الجولة السابقة أم لا  
 *	و في حال الإجابة على جميع الأسءلة, خوالي 88 بالنسبة لكل نمط, سيتم إعلان فوزك, و استحقاقك لكأس إضافات NVDA.  
 
-### التغييرات في 2.2 ###
+### التغييرات في 2.3 ###
 
+*	استبدال الأصوات المُستخدمة في مناسبات معينة بأصوات أقصر , مما يتيح لنا التخلص من فترةْ توقف بعد الصوت.  
 *	استخدام أحدث إصدار مِن نموذج إضافات NVDA, NVDA addon template.  
 *	عندما يكون الأمر "None", يعني بدون اختصار, نستبدل "None" بِ "Unassigned".  
 
@@ -47,8 +48,12 @@
 
 *	Initial version.
 
-[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.2/trainingKeyboardCommands-2.2.nvda-addon
+### المساهمات ###
 
-[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v2.1dev/trainingKeyboardCommands-2.1-dev.nvda-addon
+*	الشكر الكبير لِ cary-rowen, لملاحظاته و تزويد الإضافة بالأصوات الجديدة.  
+
+[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.3/trainingKeyboardCommands-2.3.nvda-addon
+
+[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.3-dev/trainingKeyboardCommands-2.3-dev.nvda-addon
 
 [3]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.3dev/trainingKeyboardCommands-1.3-dev.nvda-addon

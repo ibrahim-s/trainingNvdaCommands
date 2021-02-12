@@ -159,12 +159,10 @@ class Game(wx.Dialog):
 	def onOk(self, e):
 		if self.answerObtionsCumbo.GetStringSelection()== self.question.answer and not self.allQuestions:
 			winsound.PlaySound(os.path.join(sound_path, "congratulations.wav"), winsound.SND_ASYNC)
-			time.sleep(9)
 			self.endGameMessage()
 			return
 		if self.answerObtionsCumbo.GetStringSelection()== self.question.answer:
 			winsound.PlaySound(os.path.join(sound_path, "correctAnswer.wav"), winsound.SND_ASYNC)
-			time.sleep(3.5)
 			self.score+=1
 			# Translators: label for score value
 			self.scoreText.SetLabel(_("Your Score: {}/{}").format(self.score, self.totalScore))
@@ -172,7 +170,6 @@ class Game(wx.Dialog):
 		else:
 			self.allQuestions.insert(0, self.question)
 			winsound.PlaySound(os.path.join(sound_path, "incorrectAnswer.wav"), winsound.SND_ASYNC)
-			time.sleep(1)
 			self.errorMessage()
 
 	def errorMessage(self):
