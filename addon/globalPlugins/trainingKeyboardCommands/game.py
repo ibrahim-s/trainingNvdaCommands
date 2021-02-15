@@ -44,7 +44,8 @@ class QuestionObj():
 
 class Game(wx.Dialog):
 	def __init__(self, parent):
-		super(Game, self).__init__(parent, title='Training Nvda Commands', 
+		# Translators: Title of the game
+		super(Game, self).__init__(parent, title=_("Training Nvda Commands"), 
 			size=(400, 450))
 
 		self.allQuestions=[]
