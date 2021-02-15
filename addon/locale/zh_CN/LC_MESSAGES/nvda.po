@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'trainingKeyboardCommands' '2.12'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2021-02-15 20:28+0800\n"
+"PO-Revision-Date: 2021-02-15 20:35+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. If the gesture or command equals "None", replace it with "Unassigned"
+#: addon\globalPlugins\trainingKeyboardCommands\__init__.py:71
+#: addon\globalPlugins\trainingKeyboardCommands\__init__.py:72
+#: addon\globalPlugins\trainingKeyboardCommands\__init__.py:78
+#: addon\globalPlugins\trainingKeyboardCommands\__init__.py:79
+msgid "Description:"
+msgstr "描述："
+
+#. Translators: Script category for Training Keyboard Commands addon in input gestures dialog.
+#: addon\globalPlugins\trainingKeyboardCommands\__init__.py:97
+msgid "Training Keyboard Commands"
+msgstr "NVDA命令终结者"
+
+#. Translators: Message displayed in input help mode.
+#: addon\globalPlugins\trainingKeyboardCommands\__init__.py:113
+msgid "Display training keyboard Commands game dialog."
+msgstr "打开游戏对话框"
+
+#. Translators: Title of the game
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:48
+msgid "Training Nvda Commands"
+msgstr "NVDA命令终结者"
+
+#. Translators: label for the score value at the beginning of the game
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:61
+msgid "Your Score: 0"
+msgstr "得分： 0"
+
+#. Translators: label for the cumbo box of options for correct answer
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:73
+msgid "Choose Option"
+msgstr "选项"
+
+#. Translators: label for the options of radio box, for desktop layout
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:83
+msgid "Desktop layout commands"
+msgstr "台式机布局"
+
+#. Translators: label for the options of radio box, for laptop layout
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:85
+msgid "Laptop layout commands"
+msgstr "笔记本布局"
+
+#. Translators: label of radio box to choose type of keyboard commands to play
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:88
+msgid "Choose keyboard layout to train commands"
+msgstr "请选择一个键盘布局，然后开始游戏"
+
+#. Translators: label of OK button
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:96
+msgid "Ok"
+msgstr "确定(&O)"
+
+#. Translators: label ob Begin Play button
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:100
+msgid "Begin Play"
+msgstr "开始游戏(&S)"
+
+#. Translators: label of Exit button
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:104
+msgid "Exit"
+msgstr "退出(&E)"
+
+#. Translators: Message asking the user if he wishes to save remaining questions, to resume them in a later time.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:137
+msgid ""
+"Do you want to save remaining questions from this round;\n"
+"so that you can resume them later?"
+msgstr "是否要保存游戏记录以便下次继续？"
+
+#. Translators: Title of message box.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:140
+msgid "Save Game"
+msgstr "保存游戏记录"
+
+#. Translators: label for score value
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:169
+msgid "Your Score: {}/{}"
+msgstr "得分： {}/{}"
+
+#. Translators: Message displayed upon hitting the wrong answer.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:178
+msgid ""
+"Wrong answer;\n"
+" No lose, go on."
+msgstr "回答错误，游戏仍在进行中，请继续。"
+
+#. Translators: Title of message dialog.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:181
+msgid "Error Message"
+msgstr "错误信息"
+
+#. Translators: label of score
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:189
+msgid "Your Score: {}"
+msgstr "得分： {}"
+
+#. Translators: Message displayed upon ending any round of game.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:199
+msgid ""
+"Congratulations;\n"
+" you have answered all questions and won;\n"
+" see you in another round or game."
+msgstr ""
+"恭喜； \n"
+"\n"
+" 您已经完成了所有问题并获得了“NVDA杯”冠军； \n"
+"\n"
+"再见。"
+
+#. Translators: title of message dialog.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:202
+msgid "End Of Game "
+msgstr "游戏结束"
+
+#. Translators: label of radio box to play again
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:206
+msgid "Choose layout and play again"
+msgstr "选择布局并重新开始"
+
+#. Translators: Desktop layout mode
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:213
+msgid "Desktop layout"
+msgstr "台式机布局"
+
+#. Translators: Laptop layout mode
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:215
+msgid "Laptop layout"
+msgstr "笔记本布局"
+
+#. Translators: Message displayed asking the user, if he wants to resume the previous round or not.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:219
+msgid ""
+"Questions preserved of previous round of same layout found,\n"
+"Do you want to resume the previous round?"
+msgstr ""
+"发现上次的游戏记录，\n"
+"\n"
+"您要恢复吗？"
+
+#. Translators: Title of message dialog
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:222
+msgid "Resume Game"
+msgstr "恢复游戏"
+
+#. Translators: message displayed at the begining of game, giving little informations about it.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:229
+msgid ""
+"Welcome To training nvda commands like game;\n"
+"We will ask you NVDA {} commands like questions;\n"
+"and you have to choose the right answer from the available options;\n"
+"Let us then begin!"
+msgstr ""
+"欢迎进入 NVDA命令终结者，\n"
+"在本游戏中，您会看到一些有关 NVDA {} 的命令； \n"
+"\n"
+"若想取得胜利，您需要从每道题给出的四个选项中选出正确答案； \n"
+"\n"
+"如果您已经准备好了，可以点击“确定”开始游戏。"
+
+#. Translators: Title of welcome dialog.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:232
+msgid "Welcome"
+msgstr "欢迎"
+
+#. Translators: label of score text upon resuming game
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:243
+msgid "Your score: {}/{}"
+msgstr "得分： {}/{}"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+#: buildVars.py:23
+msgid "Training Keyboards Commands"
+msgstr "NVDA命令终结者"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:26
+msgid ""
+"This addon allows you to train NVDA commands in game like way, for either "
+"desktop or laptop layout mode.\n"
+"For every commands and it's description, you have to choose the right keys "
+"or answer specific to it.\n"
+"And if exiting before the end, you can save the remaining questions to "
+"resume them in later time.\n"
+"In order to use the addon, you have to assign a gesture to it via "
+"NVDAmenu>preferences>inputGestures>trainingKeyboardCommands."
+msgstr ""
+"此插件可以让您以游戏的形式，练习 NVDA 台式机或笔记本的键盘命令。\n"
+"\n"
+"根据给出的命令提示及其描述，\n"
+"您必须从选项中选择一个用于执行该命令的快捷键选项。\n"
+"\n"
+"若在游戏过程中选择退出，可以保存游戏记录（即剩余问题），以便下次继续游戏进"
+"度。\n"
+"\n"
+"若想开始游戏，您必须在 NVDA 菜单 > 选项 > 输入手势 > NVDA 命令终结者 类别下"
+"设置一个手势。"
