@@ -1,6 +1,7 @@
 # Training Keyboard commands #
 
 *	Author: Ibrahim Hamadeh  
+*	Contributors: cary rowen
 *	Download [stable version][1]  
 *	Download [development version][2]  
 *	NVDA compatibility: 2019.3 to 2019.4  
@@ -23,6 +24,11 @@ NVDA menu>preferences>inputGestures>trainingKeyboardCommands.
 *	at any time if you want to exit, you will be asked if you want to save the remaining questions for next round  
 *	if in later time you choose a layout wit saved questions, you will be asked if you want to resume the remaining questions from previous round  
 *	answering all questions, about 88 for each layout, you will be declared a winner deserving NVDA cup.  
+
+### Changes for 2.4 ###
+
+*	Added simplified Chinese translation.  
+*	Added new translatable strings.  
 
 ### Changes for 2.3 ###
 
@@ -52,8 +58,8 @@ NVDA menu>preferences>inputGestures>trainingKeyboardCommands.
 
 *	Tanks a lot to cary-rowen, for his remarks and contributing the new sounds for the addon.  
 
-[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.3/trainingKeyboardCommands-2.3.nvda-addon
+[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.4/trainingKeyboardCommands-2.4.nvda-addon
 
-[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.3-dev/trainingKeyboardCommands-2.3-dev.nvda-addon
+[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.4-dev/trainingKeyboardCommands-2.4-dev.nvda-addon
 
 [3]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.3dev/trainingKeyboardCommands-1.3-dev.nvda-addon
