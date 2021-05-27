@@ -4,7 +4,7 @@
 *	Contributors: cary rowen
 *	Download [stable version][1]  
 *	Download [development version][2]  
-*	NVDA compatibility: 2019.3 to 2019.4  
+*	NVDA compatibility: 2019.3 to 2021.1  
 *	Python compatibility: Python3 only  
 *	For previous versions of NVDA, please use this [Link][3]  
 
