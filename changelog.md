@@ -1,4 +1,3 @@
-## Changes for 2.4
+## Changes for 2.5
 
-*	Added simplified Chinese translation.  
-*	Added new translatable strings.  
+*	Added Turkish translation.  

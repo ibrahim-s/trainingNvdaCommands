@@ -23,7 +23,11 @@
 *	إذا كانت الإجابة خاطءة, لن ينقص رصيدك, و هكذا تستمر في اللعبة بغير خسارة  
 *	في أي وقت إذا أردت الخروج من اللعبة قبل النهاية, ستُسأل إذا ما كنت تريد حفظ الأسءلة المتبقية أم لا
 *	و في وقت لاحق, إذا اخترت نوع إختصاراتيوجد أسءلة محفوظة لها, ستُسأل ما إذا كنت تريد استءناف تلك الجولة السابقة أم لا  
-*	و في حال الإجابة على جميع الأسءلة, خوالي 88 بالنسبة لكل نمط, سيتم إعلان فوزك, و استحقاقك لكأس إضافات NVDA.  
+*	و في حال الإجابة على جميع الأسءلة, خوالي 95 بالنسبة لكل نمط, سيتم إعلان فوزك, و استحقاقك لكأس إضافات NVDA.  
+
+### التغييرات في 2.5 ###
+
+*	إضافةْ الترجمة إلى اللغة التُركية.
 
 ### التغييرات في 2.4 ###
 
@@ -58,8 +62,8 @@
 
 *	الشكر الكبير لِ cary-rowen, لملاحظاته و تزويد الإضافة بالأصوات الجديدة.  
 
-[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.4/trainingKeyboardCommands-2.4.nvda-addon
+[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.5/trainingKeyboardCommands-2.5.nvda-addon
 
-[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.4-dev/trainingKeyboardCommands-2.4-dev.nvda-addon
+[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.5-dev/trainingKeyboardCommands-2.5-dev.nvda-addon
 
 [3]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.3dev/trainingKeyboardCommands-1.3-dev.nvda-addon
