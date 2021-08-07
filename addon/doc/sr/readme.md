@@ -1,21 +1,20 @@
-# Clip Contents Designer #
+# Dizajner sadržaja privremene memorije #
 
 *	Authors: Noelia, Abdel.
 *	NVDA compatibility: 2019.3 or later
-*	Загрузить [стабильную версию][1]
-*	Загрузить [разрабатываемую версию][2]
+*	preuzmi [stabilnu verziju][1]
+*	preuzmi [verziju u razvoju][2]
 
 
 This add-on is used to add text to the clipboard, which can be useful when
 you want to join sections of text together ready for pasting.  The clipboard
 content can also be cleared an shown in browse mode.
 
-## Команды клавиш ##
+## Prečice ##
 
-* NVDA+windows+c: Добавить выделенный текст, символы юникода брайля,
-  представляющие объекты в MathML, или строку, которая была отмечена
-  просмотровым курсором в буфер обмена.
-* NVDA+windows+x: Очистить содержимое буфера обмена.
+* NVDA+Windows+c: Dodaje označeni tekst, brajevo predstavljanje MathML
+  objekata ili tekst označen preglednim kursorom u privremenu memoriju.
+* NVDA+Windows+x: Uklanja sadržaj privremene memorije.
 * Not assigned: Copies to (or cuts from) the clipboard, with the possibility
   of being asked for a previous confirmation.
 * Not assigned: Shows the clipboard text in browse mode, or announces if
@@ -23,18 +22,18 @@ content can also be cleared an shown in browse mode.
   browseable message, for instance if files or folders are been copied from
   Windows Explorer.
 
-Примечание: Эти команды могут быть изменены в меню NVDA, подменю Параметры,
-диалог Жесты ввода, категория просмотр текста.
+Napomena: Navedene komande možete pronaći i izmeniti kroz NVDA meni >
+Podešavanja > Ulazne komande, pa zatim pronađite sekciju Pregled teksta.
 
-## Меню Настроек ##
+## Podešavanja ##
 *	Clip Contents Designer settings: Allows to set a separator which can be used to find the text segments once the entire added text is pasted.
 It's also possible to choose if the added text will be appended or prepended, if available actions (add, clear clipboard, emulate copy and emulate cut) should be performed inmediately or after confirmation, and if confirmations will be requested always, just if text is contained in the clipboard, or if clipboard is not empty.
 Furthermore, it's possible to change the format and maximum number of characters of the clipboard text which will be shown in browse mode. Please, be aware that increasing this limit may produce issues if the clipboard contains large strings of text. The default limit is 100000 characters.
 
-Примечания:
+Notes:
 
-*	Приведенная выше команда может быть изменена из меню NVDA, подменю
-  параметры, диалог жесты ввода, категория конфигурация.
+*	The above command can be changed from NVDA menu, Preferences submenu,
+  Input gestures dialog, Configuration category.
 *	Confirmations won't be requested when a message box of NVDA is still
   opened. In those cases, actions will be inmediately performed.
 
@@ -76,43 +75,41 @@ Furthermore, it's possible to change the format and maximum number of characters
   features will be removed, so that you can restore the normal behavior for
   control+c and control+x.
 
-## Изменения для 6.0
+## Changes for 6.0
 
 *	 Added options to choose if available actions should be performed after confirmation.
 *	Added Emulate copy and Emulate cut commands, which could be assigned from the Input gestures dialog.
 *	 Added a dialog to configure the Emulate copy and Emulate cut functionalities at installation. This allows to add the control+c and control+x commands to copy and cut, and be asked if you want to replace the clipboard contents when pressing these keystrokes.
 *	Fixed documentation for script_add (Windows+NVDA+c).
 
-## Изменения для 5.0 ##
+## Promene u 5.0 ##
 
-*	Визуальное представление диалогов было модифицировано, придерживаясь
-  внешнего вида диалогов, отображаемых в NVDA.
-*	Требуется NVDA 2016.4 или позднее.
+*	Vizuelno predstavljanje dijaloga je poboljšano, slično dijalozima koji su
+  prikazani u programu NVDA.
+*	Zahteva NVDA 2016.4 ili noviji.
 
-## Изменения для 4.0 ##
-*	Add-on settings are managed from NVDA configuration, so that standard
-  profiles can be used to save different separators, and it's not needed to
-  copy the settings for importing at reinstallation.
-*	Now it's possible to choose if the added text will be appended or
-  prepended, using the Add text before clip data check box from the Clip
-  Contents Designer settings dialog.
+## Promene u 4.0 ##
+*	Podešavanja dodatka upravljaju NVDA konfiguracijom, tako da možete
+  koristiti standardne profile za čuvanje podešavanja, i ne morate da
+  kopirate podešavanja nakon reinstalacije.
+*	Sada je moguće izabrati da li će dodat tekst biti spojen ili prespojen,
+  koristeći dodaj deo teksta pre podataka izborno polje u podešavanjima
+  dodatka.
 
-## Изменения для 3.0 ##
-*	Braille representation of MathML objects can be added to the clipboard if
-  MathPlayer is installed.
-*	Если разделитель не выбран, между фрагментами текста будет добавляться
-  одна пустая строка.
-*	A shortcut can be assigned to open the Clip Contents Designer settings
-  dialog.
-*	Added a check box in the settings dialog, for choosing if the separator
-  should be copied to be imported when reinstalling the add-on.
+## Promene u 3.0 ##
+*	Brajevo predstavljanje MathML objekata se može dodati u privremenu
+  memoriju ako je MathPlayer instaliran.
+*	Ako nema udvajača, samo jedan red će biti između dodatih segmenata.
+*	‚Prečica može biti podešena za otvaranje dijaloga za podešavanja dodatka.
+*	Dodat izborni okvir u dijalogu sa podešavanjima, za izbor da li će udvajač
+  biti kopiran za ponovni uvoz nakon reinstalacije dodatka.
 
-## Изменения для 2.0 ##
-*	Символы хинди могут использоваться в качестве разделителя между
-  добавляемым содержимым.
+## Promene u 2.0 ##
+*	Indijski karakteri mogu da se koriste kao odvajanje između dodatih delova
+  teksta.
 
-## Изменения для 1.0 ##
-*	Первоначальная версия.
+## Promene u 1.0 ##
+*	Prva verzija.
 
 [[!tag dev stable]]
 

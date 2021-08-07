@@ -1,25 +1,22 @@
 # Clip Contents Designer #
 
-*	مطورو الإضافة: Noelia Ruiz Martínez.
-*	تحميل [الإصدار النهائي] [1]
-*	تحميل [الإصدار التجريبي] [2]
+*	作者: Noelia Ruiz Martínez
+*	ダウンロード [安定版][1]
+*	ダウンロード [開発版][2]
 
-This add-on is used to add text to the clipboard, which can be useful when
-you want to join sections of text together ready for pasting.  The clipboard
-content can also be cleared.
+このアドオンは、クリップボードにテキストを追加するのに使用します。貼り付け前に複数のテキスト部分を結合したい時に便利です。クリップボードの内容を消去することもできます。
 
-## مفاتيح الاختصار ##
+## キー操作: ##
 *	NVDA+windows+c: Add selected text, Unicode braille characters which
   represent MathML objects, or the string which has been marked with the
   review cursor, to the clipboard.
-*	NVDA+windows+x: لمسح محتوى الحافظة
+*	NVDA+Windows+x: クリップボードの内容を消去します。
 *	NVDA+windows+f9: Mark the current position of the review cursor as the start of the text to be added to the clipboard. If you use nvda+F9, the text will not be added.
 *	 Not assigned: Copies to (or cuts from) the clipboard, with the possibility of being asked for a previous confirmation.
 
-ملحوظة: يمكنك تغيير الاختصارات المذكورة أعلاه من خلال الذهاب إلى قائمة NVDA
-الرئيسية, ثم قائمة التفضيلات, ثم تخصيص اختصارات NVDA, ثم فئة استعراض النص.
+注: 上記のコマンドは、NVDAメニュー、設定サブメニュー、入力ジェスチャーダイアログ、テキストレビューカテゴリから変更できます。
 
-## قائمة التفضيلات ##
+## 設定サブメニュー ##
 *	Clip Contents Designer settings: Allows to set a separator which can be used to find the text segments once the entire added text is pasted.
 It's also possible to choose if the added text will be appended or prepended, if available actions (add, clear clipboard, emulate copy and emulate cut) should be performed inmediately or after confirmation, and if confirmations will be requested just if text is contained in the clipboard.
 
@@ -29,13 +26,6 @@ Notes:
   Input gestures dialog, Configuration category.
 *	Confirmations won't be requested when a message box of NVDA is still
   opened. In those cases, actions will be inmediately performed
-
-## Changes for 7.0
-
-* In the dialog to configure the Emulate copy and Emulate cut
-  functionalities at installation, if you choose no, the commands for these
-  features will be removed, so that you can restore the normal behavior for
-  control+c and control+x.
 
 ## Changes for 6.0
 
@@ -58,23 +48,21 @@ Notes:
   prepended, using the Add text before clip data check box from the Clip
   Contents Designer settings dialog.
 
-## مستجدات الإصدار 3.0 ##
+## 3.0の変更点 ##
 *	Braille representation of MathML objects can be added to the clipboard if
   MathPlayer is installed.
 *	If no separator is set, just a single line will be placed between the
   added text segments.
-*	يمكن تعيين اختصار لفتح محاورة إعدادات الإضافة.
-*	إضافة مربع تحديد لإعدادات الإضافة, للاختيار ما إذا كان ينبغي نسخ الفاصل
-  بين القطع النصية لاستيراده عند إعادة تثبيت الإضافة
+*	Clip Contents Designer 設定ダイアログを開くショートカットを割り当て可能
+*	設定ダイアログに、このアドオンの再インストールの際にインポートされるように、このセパレータをコピーするかどうかを選択するチェックボックスを追加
 
-## مستجدات الإصدار 2.0 ##
+## 2.0の変更点 ##
 *	Hindi characters can be used as the separator between added contents.
 
-## مستجدات الإصدار 1.0 ##
-*	إصدار أولي
+## バージョン1.0 ##
+*	最初のバージョン
 
 [[!tag dev stable]]
-[[!tag dev]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=ccd
 
