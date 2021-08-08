@@ -1,0 +1,192 @@
+# Copyright (C) 2020 Andrey Yakuboy
+# This file is distributed under the same license as the PACKAGE package.
+# Andrey Yakuboy <andrewia2002@yandex.ru>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'trainingKeyboardCommands' '2.0'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
+"POT-Creation-Date: 2020-10-09 10:11+0300\n"
+"PO-Revision-Date: 2020-10-13 05:43+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.7\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: addon\globalPlugins\trainingKeyboardCommands\__init__.py:92
+msgid "Training Keyboard Commands"
+msgstr "Training Keyboard Commands"
+
+#. Translators: Message displayed in input help mode.
+#: addon\globalPlugins\trainingKeyboardCommands\__init__.py:108
+msgid "Display training keyboard Commands game dialog."
+msgstr "Показать диалог новой игры training keyboard Commands"
+
+#. Translators: label for the score value at the beginning of the game
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:60
+msgid "Your Score: 0"
+msgstr "Ваши очки: 0"
+
+#. Translators: label for the cumbo box of options for correct answer
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:72
+msgid "Choose Option"
+msgstr "Выберите правильный вариант"
+
+#. Translators: label for the two options of radio box, desktop and laptop layout
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:81
+msgid "Desktop layout commands"
+msgstr "Настольная"
+
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:81
+msgid "Laptop layout commands"
+msgstr "Ноутбук"
+
+#. Translators: label of radio box to choose type of keyboard commands to play
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:84
+msgid "Choose keyboard layout to train commands"
+msgstr "Выберите раскладку клавиатуры, чтобы приступить к изучению команд"
+
+#. Translators: label of OK button
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:92
+msgid "Ok"
+msgstr "ОК"
+
+#. Translators: label ob Begin Play button
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:96
+msgid "Begin Play"
+msgstr "Начать игру"
+
+#. Translators: label of Exit button
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:100
+msgid "Exit"
+msgstr "Выход"
+
+#. Translators: Message asking the user if he wishes to save remaining questions, to resume them in a later time.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:133
+msgid ""
+"Do you want to save remaining questions from this round;\n"
+"so that you can resume them later?"
+msgstr ""
+"Сохранить оставшиеся вопросы в этой игре?\n"
+"Вы сможете вернуться к ним позже."
+
+#. Translators: Title of message box.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:136
+msgid "Save Game"
+msgstr "Сохранить игру"
+
+#. Translators: label for score value
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:167
+msgid "Your Score: {}/{}"
+msgstr "Ваши очки: {}/{}"
+
+#. Translators: Message displayed upon hitting the wrong answer.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:177
+msgid ""
+"Wrong answer;\n"
+" No lose, go on."
+msgstr ""
+"Неправильный ответ;\n"
+"Но не опускайте руки, продолжайте игру!"
+
+#. Translators: Title of message dialog.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:180
+msgid "Error Message"
+msgstr "Ошибка"
+
+#. Translators: label of score
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:188
+#, python-format
+msgid "Your Score: %d"
+msgstr "Ваши очки: %d"
+
+#. Translators: Message displayed upon ending any round of game.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:198
+msgid ""
+"Congratulations;\n"
+" you have answered all questions and won;\n"
+" see you in another round or game."
+msgstr ""
+"Поздравляем!\n"
+"Вы ответили на все вопросы и выиграли!\n"
+"Увидимся в очередном раунде нашей игры."
+
+#. Translators: title of message dialog.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:201
+msgid "End Of Game "
+msgstr "Конец игры"
+
+#. Translators: label of radio box to play again
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:205
+msgid "Choose layout and play again"
+msgstr "Выберите расскладку и играйте ещё"
+
+#. Translators: Message displayed asking the user, if he wants to resume the previous round or not.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:214
+msgid ""
+"Questions preserved of previous round of same layout found,\n"
+"Do you want to resume the previous round?"
+msgstr ""
+"Обнаружена сохранённая игра с такой же раскладкой. Хотите продолжить?"
+
+#. Translators: Title of message dialog
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:217
+msgid "Resume Game"
+msgstr "Восстановить игру"
+
+#. Translators: message displayed at the begining of game, giving little informations about it.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:224
+msgid ""
+"Welcome To training nvda commands like game;\n"
+"We will ask you NVDA {} commands like questions;\n"
+"and you have to choose the right answer from the available options;\n"
+"Let us then begin!"
+msgstr ""
+"Добро пожаловать в игру \"Training nvda commands\"!\n"
+"Мы будем задавать вам клавиатурные команды NVDA, а вы должны выбрать "
+"верный вариант из списка.\n"
+"Итак, давайте начнём!"
+
+#. Translators: Title of welcome dialog.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:227
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+#. Translators: label of score text upon resuming game
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:238
+msgid "Your score: {}/{}"
+msgstr "Ваши очки: {}/{}"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#: buildVars.py:17
+msgid "Training Keyboards Commands"
+msgstr "Training Keyboards Commands"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:20
+msgid ""
+"This addon allows you to train NVDA commands in game like way, for either "
+"desktop or laptop layout mode.\n"
+"For every commands and it's description, you have to choose the right keys "
+"or answer specific to it.\n"
+"And if exiting before the end, you can save the remaining questions to "
+"resume them in later time.\n"
+"In order to use the addon, you have to assign a gesture to it via "
+"NVDAmenu>preferences>inputGestures>trainingKeyboardCommands."
+msgstr ""
+"Это дополнение позволяет вам изучать клавиатурные команды NVDA в игровом "
+"режиме как для настольной раскладки, так и для раскладки \"ноутбук\".\n"
+"для каждой команды вам нужно будет выбрать правильное сочетание клавиш, "
+"которое соответствует этой команде.\n"
+"Если вы закроете игру до завершения, вы сможете сохранить её, чтобы "
+"вернуться позже.\n"
+"Чтобы использовать дополнение, нужно назначить горячую клавишу в меню "
+"NVDA>параметры>жесты ввода>trainingKeyboardCommands."
