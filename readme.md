@@ -5,7 +5,6 @@
 *	Download [stable version][1]  
 *	Download [development version][2]  
 *	NVDA compatibility: 2019.3 and later  
-*	Python compatibility: Python3 only  
 *	For previous versions of NVDA, please use this [Link][3]  
 
 This addon is aimed to train NVDA commands in a game like way, for either keyboard layout modes  
@@ -28,6 +27,7 @@ NVDA menu>preferences>inputGestures>trainingKeyboardCommands.
 ### Changes for 2.5 ###
 
 *	Added Turkish translation.
+*	Use script decorators.
 
 ### Changes for 2.4 ###
 

@@ -9,7 +9,9 @@ import globalPluginHandler
 import os, sys
 import threading
 
+# declared earlier, to be used in importing bs4.
 CURRENT_DIR= os.path.abspath(os.path.dirname(__file__))
+
 #importing bs4 is borrowed from textInformation addon by Carter Temm.
 sys.path.append(CURRENT_DIR)
 import imp
@@ -19,13 +21,16 @@ del sys.path[-1]
 
 import random
 import gui
+import documentationUtils
+from scriptHandler import script
 from .game import Game
 
 import addonHandler
 addonHandler.initTranslation()
 
+
 #path of keyCommands.html in documentation files, taking into consideration nvda language
-keyCommandsFile= gui.getDocFilePath("keyCommands.html")
+keyCommandsFile= documentationUtils.getDocFilePath("keyCommands.html")
 
 def readFile(filepath):
 	''' reading the file that contains the required data and returning its html source as a string.'''
@@ -52,8 +57,7 @@ def populateOptionsAndReturnList(lst, lst_all):
 	return result
 
 def scrapCommandsAndMakeFile():
-	'''make the file commandLists.py, in which we want to write in it the two lists desktop and laptop scraped data.
-	'''
+	'''make the file commandLists.py, in which we want to write in it the two lists desktop and laptop scraped data.'''
 	soup = BeautifulSoup(readFile(keyCommandsFile), 'html.parser')
 	allCommands= []
 	desktopQuestions= []
@@ -102,6 +106,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		t.setDaemon(True)
 		t.start()
 
+	@script(
+	# Translators: Message displayed in input help mode.
+	description= _("Display training keyboard Commands game dialog.")
+	)
 	def script_startGame(self, gesture):
 		global PLAYING
 		if not PLAYING:
@@ -109,5 +117,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			PLAYING.postInit()
 		else:
 			PLAYING.Raise()
-	# Translators: Message displayed in input help mode.
-	script_startGame.__doc__= _("Display training keyboard Commands game dialog.")
