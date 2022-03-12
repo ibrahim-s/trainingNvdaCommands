@@ -1,4 +1,3 @@
-## Changes for 2.5
+## Changes for 2.6
 
-*	Added Turkish translation.  
-*	Use script decorators.
+*	Update last tested version to 2022.1, to comply with latest addon's api.
