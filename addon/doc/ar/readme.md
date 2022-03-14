@@ -5,8 +5,7 @@
 *	رابط [stable version][1]  
 *	رابط [development version][2]  
 *	التوافُق مع NVDA: 2019.3 فما فوق  
-*	التوافُق مع بايثون: Python3 فقط.  
-*	للإصدارات القديمة مِن NVDA, يمكن استخدام هذه النسخة [Link][3]  
+
 
 هذه الإضافة تتيح لك التدرب على أوامر NVDA, على طريقة لعبة  
 سواء بالنسبة لاختصارات الحاسوب المكتبي أو المحمول  
@@ -24,6 +23,10 @@
 *	في أي وقت إذا أردت الخروج من اللعبة قبل النهاية, ستُسأل إذا ما كنت تريد حفظ الأسءلة المتبقية أم لا
 *	و في وقت لاحق, إذا اخترت نوع إختصاراتيوجد أسءلة محفوظة لها, ستُسأل ما إذا كنت تريد استءناف تلك الجولة السابقة أم لا  
 *	و في حال الإجابة على جميع الأسءلة, خوالي 95 بالنسبة لكل نمط, سيتم إعلان فوزك, و استحقاقك لكأس إضافات NVDA.  
+
+### التغييرات في 2.6 ###
+
+*	تحديث آخِر إصدار تم تجريبه إلى 2022.1, للتوافق مع ال api الجديد للإضافات.
 
 ### التغييرات في 2.5 ###
 
@@ -62,8 +65,6 @@
 
 *	الشكر الكبير لِ cary-rowen, لملاحظاته و تزويد الإضافة بالأصوات الجديدة.  
 
-[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.5/trainingKeyboardCommands-2.5.nvda-addon
+[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.6/trainingKeyboardCommands-2.6.nvda-addon
 
-[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.5-dev/trainingKeyboardCommands-2.5-dev.nvda-addon
-
-[3]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.3dev/trainingKeyboardCommands-1.3-dev.nvda-addon
+[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.6-dev/trainingKeyboardCommands-2.6-dev.nvda-addon

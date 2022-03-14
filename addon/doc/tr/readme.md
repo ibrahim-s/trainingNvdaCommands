@@ -1,23 +1,10 @@
----
-autonumber-headings: false
-extratags: true
-extratags-back: true
-filename: Klavye Komutları Eğitimi 2.4
-lang: tr
-mathjax: false
-path: '%USERPROFILE%\documents'
-template: default
-title: Klavye Komutları Eğitimi
-toc: false
-...
+# Klavye Komutları Eğitimi #
 
 *	Yazar: İbrahim Hamadeh  
 *	Katkıda Bulunanlar: Cary Rowen  
 *	İndir [Kararlı Sürüm][1]  
 *	İndir [geliştirici sürümü][2]  
-*	NVDA Uyumluluğu: 2019.3 ve üzeri  
-*	Python ile uyumluluk: Yalnızca Python3.  
-*	NVDA'nın eski sürümleri için [bu bağlantıdaki sürüm kullanılabilir ][3]  
+*	NVDA Uyumluluğu: 2019.3 ve sonrası.  
 
 Bu eklenti, her iki klavye düzeni  için NVDA komutlarını oyun benzeri bir şekilde öğretmeyi amaçlamaktadır.  
 Tüm komut verileri, NVDA locale klasöründeki keyCommands.html dosyasından alınır.  
@@ -34,6 +21,10 @@ NVDA menüsü>tercihler>Girdi Hareketleri>Klavye Komutları Eğitimi, yolunu kul
 *	Herhangi bir zamanda çıkmak isterseniz oynamakta olduğunuz turu kaydetmek isteyip istemediğiniz sorulacaktır.  
 *	Daha sonra oyuna başladığınızda, seçtiğiniz klavye düzeni için bir tur kayıtlıysa, o tura devam etmek isteyip istemediğiniz sorulacaktır.  
 *	Her iki düzende bulunan yaklaşık 95 adet sorunun hepsini doğru   cevaplarsanız NVDA kupasını kazanırsınız.  
+
+### 2.6 için değişiklikler ###
+
+*	NVDA 2022 sürümü ile eklenti api'si uyumlu hale getirildi.
 
 ### 2.5'teki değişiklikler ###
 
