@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-06-07 22:18+0300\n"
-"PO-Revision-Date: 2022-06-07 23:02+0300\n"
+"POT-Creation-Date: 2022-06-14 18:38+0300\n"
+"PO-Revision-Date: 2022-06-14 19:27+0300\n"
 "Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
 "Language-Team: \n"
 "Language: uk_UA\n"
@@ -12,87 +12,62 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 3.1\n"
-"X-Poedit-Basepath: ../../../globalPlugins/trainingKeyboardCommands\n"
-"X-Poedit-SearchPath-0: __init__.py\n"
-"X-Poedit-SearchPath-1: commandLists.py\n"
-"X-Poedit-SearchPath-2: game.py\n"
-"X-Poedit-SearchPath-3: bs4/__init__.py\n"
-"X-Poedit-SearchPath-4: bs4/__meta__.py\n"
-"X-Poedit-SearchPath-5: bs4/_markupbase.py\n"
-"X-Poedit-SearchPath-6: bs4/COPYING.txt\n"
-"X-Poedit-SearchPath-7: bs4/css_match.py\n"
-"X-Poedit-SearchPath-8: bs4/css_parser.py\n"
-"X-Poedit-SearchPath-9: bs4/css_types.py\n"
-"X-Poedit-SearchPath-10: bs4/dammit.py\n"
-"X-Poedit-SearchPath-11: bs4/diagnose.py\n"
-"X-Poedit-SearchPath-12: bs4/element.py\n"
-"X-Poedit-SearchPath-13: bs4/formatter.py\n"
-"X-Poedit-SearchPath-14: bs4/parser.py\n"
-"X-Poedit-SearchPath-15: bs4/soupsieve.py\n"
-"X-Poedit-SearchPath-16: bs4/testing.py\n"
-"X-Poedit-SearchPath-17: bs4/util.py\n"
-"X-Poedit-SearchPath-18: bs4/builder/__init__.py\n"
-"X-Poedit-SearchPath-19: bs4/builder/_html5lib.py\n"
-"X-Poedit-SearchPath-20: bs4/builder/_htmlparser.py\n"
-"X-Poedit-SearchPath-21: bs4/builder/_lxml.py\n"
-"X-Poedit-SearchPath-22: bs4/tests/__init__.py\n"
-"X-Poedit-SearchPath-23: bs4/tests/test_builder_registry.py\n"
-"X-Poedit-SearchPath-24: bs4/tests/test_docs.py\n"
-"X-Poedit-SearchPath-25: bs4/tests/test_html5lib.py\n"
-"X-Poedit-SearchPath-26: bs4/tests/test_htmlparser.py\n"
-"X-Poedit-SearchPath-27: bs4/tests/test_lxml.py\n"
-"X-Poedit-SearchPath-28: bs4/tests/test_soup.py\n"
-"X-Poedit-SearchPath-29: bs4/tests/test_tree.py\n"
+"X-Poedit-Basepath: ../../../..\n"
+"X-Poedit-SearchPath-0: buildVars.py\n"
+"X-Poedit-SearchPath-1: addon/globalPlugins\n"
 
-#: __init__.py:75 __init__.py:76 __init__.py:82 __init__.py:83
+#: addon/globalPlugins/trainingKeyboardCommands/__init__.py:75
+#: addon/globalPlugins/trainingKeyboardCommands/__init__.py:76
+#: addon/globalPlugins/trainingKeyboardCommands/__init__.py:82
+#: addon/globalPlugins/trainingKeyboardCommands/__init__.py:83
 msgid "Description:"
 msgstr "Опис:"
 
-#: __init__.py:101
+#: addon/globalPlugins/trainingKeyboardCommands/__init__.py:101
 msgid "Training Keyboard Commands"
 msgstr "Тренажер клавіатурних команд"
 
-#: __init__.py:111
+#: addon/globalPlugins/trainingKeyboardCommands/__init__.py:111
 msgid "Display training keyboard Commands game dialog."
 msgstr "Показати діалог гри тренажера клавіатурних команд."
 
-#: game.py:48
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:48
 msgid "Training Nvda Commands"
 msgstr "Тренажер команд NVDA"
 
-#: game.py:61
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:61
 msgid "Your Score: 0"
 msgstr "Ваш результат: 0"
 
-#: game.py:73
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:73
 msgid "Choose Option"
 msgstr "Оберіть варіант"
 
-#: game.py:83
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:83
 msgid "Desktop layout commands"
 msgstr "Команди розкладки клавіатури Desktop"
 
-#: game.py:85
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:85
 msgid "Laptop layout commands"
 msgstr "Команди розкладки Laptop"
 
-#: game.py:88
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:88
 msgid "Choose keyboard layout to train commands"
 msgstr "Оберіть розкладку клавіатури для тренування команд"
 
-#: game.py:96
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:96
 msgid "Ok"
 msgstr "Гаразд"
 
-#: game.py:100
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:100
 msgid "Begin Play"
 msgstr "Розпочати гру"
 
-#: game.py:104
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:104
 msgid "Exit"
 msgstr "Вихід"
 
-#: game.py:137
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:137
 msgid ""
 "Do you want to save remaining questions from this round;\n"
 "so that you can resume them later?"
@@ -100,15 +75,15 @@ msgstr ""
 "Бажаєте зберегти непройдені запитання з цього раунду;\n"
 "щоб змогти відновити їх пізніше?"
 
-#: game.py:140
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:140
 msgid "Save Game"
 msgstr "Зберегти гру"
 
-#: game.py:169
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:169
 msgid "Your Score: {}/{}"
 msgstr "Ваш результат: {}/{}"
 
-#: game.py:178
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:178
 msgid ""
 "Wrong answer;\n"
 " No lose, go on."
@@ -116,15 +91,15 @@ msgstr ""
 "Неправильна відповідь;\n"
 " Та ви не програли, продовжуйте."
 
-#: game.py:181
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:181
 msgid "Error Message"
 msgstr "Повідомлення про помилку"
 
-#: game.py:189
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:189
 msgid "Your Score: {}"
 msgstr "Ваш результат: {}"
 
-#: game.py:199
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:199
 msgid ""
 "Congratulations;\n"
 " you have answered all questions and won;\n"
@@ -134,23 +109,23 @@ msgstr ""
 " ви відповіли на всі запитання і здобули перемогу.\n"
 " побачимося в наступному раунді або грі."
 
-#: game.py:202
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:202
 msgid "End Of Game "
 msgstr "Кінець гри "
 
-#: game.py:206
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:206
 msgid "Choose layout and play again"
 msgstr "Оберіть розкладку і зіграйте знову"
 
-#: game.py:213
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:213
 msgid "Desktop layout"
 msgstr "Розкладка Desktop"
 
-#: game.py:215
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:215
 msgid "Laptop layout"
 msgstr "Розкладка Laptop"
 
-#: game.py:219
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:219
 msgid ""
 "Questions preserved of previous round of same layout found,\n"
 "Do you want to resume the previous round?"
@@ -158,11 +133,11 @@ msgstr ""
 "Виявлено запитання, збережені з попереднього раунду тієї ж розкладки,\n"
 "Бажаєте відновити попередній раунд?"
 
-#: game.py:222
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:222
 msgid "Resume Game"
 msgstr "Відновити гру"
 
-#: game.py:229
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:229
 msgid ""
 "Welcome To training nvda commands like game;\n"
 "We will ask you NVDA {} commands like questions;\n"
@@ -174,10 +149,34 @@ msgstr ""
 "а ви повинні обрати правильну відповідь із доступних варіантів;\n"
 "Розпочнімо!"
 
-#: game.py:232
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:232
 msgid "Welcome"
 msgstr "Вітаємо"
 
-#: game.py:243
+#: addon/globalPlugins/trainingKeyboardCommands/game.py:243
 msgid "Your score: {}/{}"
 msgstr "Ваш результат: {}/{}"
+
+#: buildVars.py:23
+msgid "Training Keyboards Commands"
+msgstr "Тренажер клавіатурних команд"
+
+#: buildVars.py:26
+msgid ""
+"This addon allows you to train NVDA commands in game like way, for either "
+"desktop or laptop layout mode.\n"
+"For every commands and it's description, you have to choose the right keys "
+"or answer specific to it.\n"
+"And if exiting before the end, you can save the remaining questions to "
+"resume them in later time.\n"
+"In order to use the addon, you have to assign a gesture to it via "
+"NVDAmenu>preferences>inputGestures>trainingKeyboardCommands."
+msgstr ""
+"Цей додаток дозволяє вивчати команди NVDA в ігровій формі, як для "
+"розкладки клавіатури Desktop, так і для розкладки Laptop.\n"
+"Для кожної команди та її опису вам потрібно выбрати правильні клавіші або "
+"відповідь, яка їй відповідає.\n"
+"Якщо ви вийдете з гри до її завершення, ви можете зберегти непройдені "
+"запитання, щоб продовжувати відповідати на них пізніше.\n"
+"Для використання додатка необхідно призначити на його запуск жест через "
+"меню NVDA>параметри>жести вводу>Тренажер клавіатурних команд."
