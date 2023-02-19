@@ -1,3 +1,3 @@
-## Changes for 2.7
+## Changes for 2.8
 
-*	Add Ukrainian translation.
+*	Update last tested version to comply with NVDA 2023.1.

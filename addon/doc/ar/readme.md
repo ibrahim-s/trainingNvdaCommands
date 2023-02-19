@@ -3,7 +3,6 @@
 *	مصمم الإضافة: ابراهيم حمادة  
 *	المساهِمون: Cary Rowen  
 *	رابط [stable version][1]  
-*	رابط [development version][2]  
 *	التوافُق مع NVDA: 2019.3 فما فوق  
 
 هذه الإضافة تتيح لك التدرب على أوامر NVDA, على طريقة لعبة  
@@ -22,6 +21,10 @@
 *	في أي وقت إذا أردت الخروج من اللعبة قبل النهاية, ستُسأل إذا ما كنت تريد حفظ الأسءلة المتبقية أم لا
 *	و في وقت لاحق, إذا اخترت نوع إختصاراتيوجد أسءلة محفوظة لها, ستُسأل ما إذا كنت تريد استءناف تلك الجولة السابقة أم لا  
 *	و في حال الإجابة على جميع الأسءلة, خوالي 95 بالنسبة لكل نمط, سيتم إعلان فوزك, و استحقاقك لكأس إضافات NVDA.  
+
+### التغييرات في 2.8 ###
+
+*	تحديث آخِر إصدار تَمَّ تجريبه إلى 2023.1 بغيةْ التوافق مع أحدث إصدار مِن NVDA.
 
 ### التغييرات في 2.7 ###
 
@@ -68,6 +71,4 @@
 
 *	الشكر الكبير لِ cary-rowen, لملاحظاته و تزويد الإضافة بالأصوات الجديدة.  
 
-[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.7/trainingKeyboardCommands-2.7.nvda-addon
-
-[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.7-dev/trainingKeyboardCommands-2.7-dev.nvda-addon
+[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.8/trainingKeyboardCommands-2.8.nvda-addon

@@ -64,7 +64,7 @@ def scrapCommandsAndMakeFile():
 	labtopQuestions= []
 	tables= soup.find_all('table')
 
-	for table in tables[0:15]+tables[23: 33]:
+	for table in tables[0:16]+tables[23: 33]:
 		rows= table.find_all('tr')[1:]
 		for row in rows:
 			cells= row.find_all('td')
