@@ -20,7 +20,11 @@ NVDA menu>preferences>inputGestures>trainingKeyboardCommands.
 *	if the answer was wrong, the score will not change, and go on with no loose  
 *	at any time if you want to exit, you will be asked if you want to save the remaining questions for next round  
 *	if in later time you choose a layout wit saved questions, you will be asked if you want to resume the remaining questions from previous round  
-*	answering all questions, about 95 for each layout, you will be declared a winner deserving NVDA addon's cup.  
+*	answering all questions, about 108 for each layout, you will be declared a winner deserving NVDA addon's cup.  
+
+### Changes for 2.9 ###
+
+*	Release first version to addon store.
 
 ### Changes for 2.8 ###
 
@@ -72,4 +76,4 @@ NVDA menu>preferences>inputGestures>trainingKeyboardCommands.
 
 *	Tanks a lot to cary-rowen, for his remarks and contributing the new sounds for the addon.  
 
-[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.8/trainingKeyboardCommands-2.8.nvda-addon
+[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.9/trainingKeyboardCommands-2.9.nvda-addon
