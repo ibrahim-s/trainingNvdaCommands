@@ -8,26 +8,22 @@
 import globalPluginHandler
 import os, sys
 import threading
-
-# declared earlier, to be used in importing bs4.
-CURRENT_DIR= os.path.abspath(os.path.dirname(__file__))
-
-#importing bs4 is borrowed from textInformation addon by Carter Temm.
-sys.path.append(CURRENT_DIR)
-import imp
-a, b, c=imp.find_module("bs4")
-BeautifulSoup=imp.load_module("bs4", a, b, c).BeautifulSoup
-del sys.path[-1]
-
 import random
 import gui
 import documentationUtils
 from scriptHandler import script
 from .game import Game
+from logHandler import log
+
+# declared earlier, to be used in importing bs4.
+CURRENT_DIR= os.path.abspath(os.path.dirname(__file__))
+
+sys.path.append(CURRENT_DIR)
+from bs4 import BeautifulSoup
+del sys.path[-1]
 
 import addonHandler
 addonHandler.initTranslation()
-
 
 #path of keyCommands.html in documentation files, taking into consideration nvda language
 keyCommandsFile= documentationUtils.getDocFilePath("keyCommands.html")
@@ -39,59 +35,97 @@ def readFile(filepath):
 	return html
 
 def populateOptionsAndReturnList(lst, lst_all):
-	'''Adding to obtions or answers list three random incorrect commands, beside the correct command already there.
-	lst is a list of questions data, each element of it is a tuple, first item of it is the question and the second item is a list containing one item which is the correct answer.
-	lst_all is a lis containing all scraped commands.
+	'''build the obtions or answers list as the second item of question tuple, that contains three random incorrect commands, beside the correct command .
+	lst is a list of tuples, items of type string, first item of it is the question and the second item is the correct answer.
+	lst_all is a lis of strings containing all scraped commands.
 	'''
 	result= []
-	for question in lst:
-		#the lis containing only the right command, and we want to add to it 3 incorrect command
-		options= question[1]
+	for question, rightAnswer in lst:
+		#Instantiating options list, should contain three random incorrect commands, beside the right one.
+		options= [rightAnswer]
 		i=0
 		while i<3:
 			item= random.choice(lst_all)
-			if any(i in options for i in (item, item.capitalize(), item.lower())): continue
+			if any(j in options for j in (item, item.capitalize(), item.lower())): continue
 			options.append(item)
 			i+=1
-		result.append(question)
+		result.append((question, options))
 	return result
 
-def scrapCommandsAndMakeFile():
-	'''make the file commandLists.py, in which we want to write in it the two lists desktop and laptop scraped data.'''
+prefix_dict= {
+#Microsoft word commands table of index 15
+15: "Microsoft Word",
+#Microsoft Excel commands table of index 16
+16: "Microsoft Excel",
+#Microsoft PowerPoint commands table of index 17
+17: "Microsoft PowerPoint",
+#Windows Console commands table of index 18
+18: "Windows Console"
+}
+
+def getPrefixForTable(indx, table):
+	if table.find_previous_sibling('h3').text== prefix_dict[indx]:
+		prefix= "In "+ prefix_dict[indx] +':\n'
+	else:
+		prefix = ""
+	return prefix
+
+def scrapRequiredData():
+	'''Establish three lists desktopQuestions, labtopQuestions, allCommands.'''
 	soup = BeautifulSoup(readFile(keyCommandsFile), 'html.parser')
-	allCommands= []
 	desktopQuestions= []
 	labtopQuestions= []
+	allCommands= set()
 	tables= soup.find_all('table')
 
-	for table in tables[0:16]+tables[23: 33]:
+	#for table in tables[0:19]+tables[23: 40]:
+	for indx, table in enumerate(tables[0:18]+tables[22: 37]):
 		rows= table.find_all('tr')[1:]
+		# The following two lines for debugging purposes.
+		#tableStartsWith= rows[0].find_all('td')[0].text
+		#log.info(f'index: {indx} {tableStartsWith}')
 		for row in rows:
 			cells= row.find_all('td')
 			if len(cells) in (4,5):
+				commandName= cells[0].get_text()
+				commandDescription= cells[-1].get_text()
 				deskCommand= cells[1].get_text()
 				lapCommand= cells[2].get_text()
 				# If the gesture or command equals "None", replace it with "Unassigned"
-				deskQuestion=(cells[0].get_text() + ';\n' + _("Description:") + '\n'+cells[-1].get_text(), [deskCommand if deskCommand != "None" else "Unassigned"])
-				labQuestion= (cells[0].get_text() +';\n' + _("Description:") +'\n'+cells[-1].get_text(), [lapCommand if lapCommand != "None" else "Unassigned"])
+				deskQuestion=(commandName + ';\n' + _("Description:") + '\n'+commandDescription, deskCommand if deskCommand.lower() != "none" else "Unassigned")
+				labQuestion= (commandName +';\n' + _("Description:") +'\n'+commandDescription, lapCommand if lapCommand.lower() != "none" else "Unassigned")
 				desktopQuestions.append(deskQuestion)
 				labtopQuestions.append(labQuestion)
-				allCommands.append(deskCommand)
-				allCommands.append(lapCommand)
+				allCommands.update({deskCommand, lapCommand})
 			if len(cells)==3:
-				desktopQuestions.append((cells[0].get_text() + ';\n' +_("Description:") + '\n'+cells[-1].get_text(), [cells[1].get_text()]))
-				labtopQuestions.append((cells[0].get_text() + ';\n' + _("Description:") + '\n'+cells[-1].get_text(), [cells[1].get_text()]))
-				allCommands.append(cells[1].get_text())
-	s=set(allCommands)
-	s.discard("None")
-	allCommands=list(s)
-	l1= populateOptionsAndReturnList(desktopQuestions, allCommands)
-	l2= populateOptionsAndReturnList(labtopQuestions, allCommands)
-	#writing the two lists to a file.
+				# Prefix is the name of program under which the command is used.
+				prefix= getPrefixForTable(indx, table) if indx in (15, 16, 17, 18) else ""
+				commandName= cells[0].get_text()
+				commandDescription= cells[-1].get_text()
+				commandKey = cells[1].get_text()
+				question = (prefix+ commandName + ';\n' +_("Description:") + '\n'+commandDescription, commandKey)
+				desktopQuestions.append(question)
+				labtopQuestions.append(question)
+				allCommands.add(commandKey)
+	# Remove from allCommands set the 2 strings 'None' and 'none'.
+	allCommands= allCommands - {"None", "none"}
+	# Convert allCommands from a set to a list.
+	allCommands=list(allCommands)
+	# Return the 3 lists.
+	return desktopQuestions, labtopQuestions, allCommands
+
+#writing the two lists to a file.
+def writeListsToFile(l1, l2):
 	with open(os.path.join(CURRENT_DIR, 'commandLists.py'), 'w', encoding= 'utf-8') as f:
 		f.write('desktopList= '+str(l1))
 		f.write('\n')
 		f.write('laptopList= '+str(l2))
+
+def buildDataAndWriteToFile():
+	desktopQuestions, labtopQuestions, allCommands= scrapRequiredData()
+	desktopLst= populateOptionsAndReturnList(desktopQuestions, allCommands)
+	laptopLst= populateOptionsAndReturnList(labtopQuestions, allCommands)
+	writeListsToFile(desktopLst, laptopLst)
 
 # current instance
 PLAYING = None
@@ -102,7 +136,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
-		t= threading.Thread(target= scrapCommandsAndMakeFile)
+		t= threading.Thread(target= buildDataAndWriteToFile)
 		t.setDaemon(True)
 		t.start()
 
