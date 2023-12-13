@@ -10,6 +10,7 @@ import os, sys
 import threading
 import random
 import gui
+import core
 import documentationUtils
 from scriptHandler import script
 from .game import Game
@@ -52,20 +53,17 @@ def populateOptionsAndReturnList(lst, lst_all):
 		result.append((question, options))
 	return result
 
-prefix_dict= {
-#Microsoft word commands table of index 15
-15: "Microsoft Word",
-#Microsoft Excel commands table of index 16
-16: "Microsoft Excel",
-#Microsoft PowerPoint commands table of index 17
-17: "Microsoft PowerPoint",
-#Windows Console commands table of index 18
-18: "Windows Console"
-}
+appsOfInterest= (
+	"Microsoft Word",
+	"Microsoft Excel",
+	"Microsoft PowerPoint",
+	"Windows Console"
+)
 
-def getPrefixForTable(indx, table):
-	if table.find_previous_sibling('h3').text== prefix_dict[indx]:
-		prefix= "In "+ prefix_dict[indx] +':\n'
+def getPrefixForTable(table):
+	previousH3 = table.find_previous_sibling('h3')
+	if previousH3 and previousH3.text in appsOfInterest:
+		prefix= "In "+ previousH3.text + ":\n"
 	else:
 		prefix = ""
 	return prefix
@@ -79,11 +77,11 @@ def scrapRequiredData():
 	tables= soup.find_all('table')
 
 	#for table in tables[0:19]+tables[23: 40]:
-	for indx, table in enumerate(tables[0:18]+tables[22: 37]):
+	for table in tables[0:18]+tables[22: 37]:
 		rows= table.find_all('tr')[1:]
 		# The following two lines for debugging purposes.
 		#tableStartsWith= rows[0].find_all('td')[0].text
-		#log.info(f'index: {indx} {tableStartsWith}')
+		#log.info(f'table starts which:\n{tableStartsWith}')
 		for row in rows:
 			cells= row.find_all('td')
 			if len(cells) in (4,5):
@@ -99,7 +97,7 @@ def scrapRequiredData():
 				allCommands.update({deskCommand, lapCommand})
 			if len(cells)==3:
 				# Prefix is the name of program under which the command is used.
-				prefix= getPrefixForTable(indx, table) if indx in (15, 16, 17, 18) else ""
+				prefix= getPrefixForTable(table)
 				commandName= cells[0].get_text()
 				commandDescription= cells[-1].get_text()
 				commandKey = cells[1].get_text()
@@ -122,10 +120,15 @@ def writeListsToFile(l1, l2):
 		f.write('laptopList= '+str(l2))
 
 def buildDataAndWriteToFile():
-	desktopQuestions, labtopQuestions, allCommands= scrapRequiredData()
-	desktopLst= populateOptionsAndReturnList(desktopQuestions, allCommands)
-	laptopLst= populateOptionsAndReturnList(labtopQuestions, allCommands)
-	writeListsToFile(desktopLst, laptopLst)
+	def startProcess():
+		desktopQuestions, labtopQuestions, allCommands= scrapRequiredData()
+		desktopLst= populateOptionsAndReturnList(desktopQuestions, allCommands)
+		laptopLst= populateOptionsAndReturnList(labtopQuestions, allCommands)
+		writeListsToFile(desktopLst, laptopLst)
+	t= threading.Thread(target= startProcess)
+	t.Daemon= True
+	t.start()
+	#log.info('starting building data for training keyboard commands ...')
 
 # current instance
 PLAYING = None
@@ -136,9 +139,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self, *args, **kwargs):
 		super(GlobalPlugin, self).__init__(*args, **kwargs)
-		t= threading.Thread(target= buildDataAndWriteToFile)
-		t.setDaemon(True)
-		t.start()
+		core.postNvdaStartup.register(buildDataAndWriteToFile)
 
 	@script(
 	# Translators: Message displayed in input help mode.
