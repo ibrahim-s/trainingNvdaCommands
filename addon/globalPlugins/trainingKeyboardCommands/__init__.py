@@ -76,8 +76,7 @@ def scrapRequiredData():
 	allCommands= set()
 	tables= soup.find_all('table')
 
-	#for table in tables[0:19]+tables[23: 40]:
-	for table in tables[0:18]+tables[22: 37]:
+	for table in tables[0:21]+tables[25: 42]:
 		rows= table.find_all('tr')[1:]
 		# The following two lines for debugging purposes.
 		#tableStartsWith= rows[0].find_all('td')[0].text
