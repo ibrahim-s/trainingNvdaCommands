@@ -1,3 +1,3 @@
-### Changes for 3.2 ###
+### Changes for 3.2.1 ###
 
-*	Update last tested version, so now the addon is compatible with NVDA 2024.1.
+*	Add translation to Italian language, contributed by Leonardo Marenda.
