@@ -1,3 +1,3 @@
-### Changes for 3.2.1 ###
+### Changes for 3.2.2 ###
 
-*	Add translation to Italian language, contributed by Leonardo Marenda.
+*	Add portuguese translation, contributed by Ângelo Abrantes.
