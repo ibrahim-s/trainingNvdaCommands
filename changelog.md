@@ -1,3 +1,3 @@
-### Changes for 3.2.2 ###
+### Changes for 3.2.3 ###
 
-*	Add portuguese translation, contributed by Ângelo Abrantes.
+*	Update Turkish translation, contributed by Umut KORKMAZ.

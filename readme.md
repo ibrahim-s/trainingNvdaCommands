@@ -2,7 +2,7 @@
 
 *	Author: Ibrahim Hamadeh  
 *	Contributors: cary rowen
-*	Download [Stable Version 3.2.2][1]  
+*	Download [Stable Version 3.2.3][1]  
 *	NVDA compatibility: 2019.3 and later  
 
 This addon is aimed to train NVDA commands in a game like way, for either keyboard layout modes  
@@ -21,6 +21,10 @@ NVDA menu>preferences>inputGestures>trainingKeyboardCommands.
 *	at any time if you want to exit, you will be asked if you want to save the remaining questions for next round  
 *	if in later time you choose a layout wit saved questions, you will be asked if you want to resume the remaining questions from previous round  
 *	answering all questions, about 136 for each layout, you will be declared a winner deserving NVDA addon's cup.  
+
+### Changes for 3.2.3 ###
+
+*	Update Turkish translation, contributed by Umut KORKMAZ.
 
 ### Changes for 3.2.2 ###
 
@@ -99,4 +103,4 @@ For instance in Microsoft word commands, the question is prefixed with "In Micro
 
 *	Tanks a lot to cary-rowen, for his remarks and contributing the new sounds for the addon.  
 
-[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/3.2.2/trainingKeyboardCommands-3.2.2.nvda-addon
+[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/3.2.3/trainingKeyboardCommands-3.2.3.nvda-addon

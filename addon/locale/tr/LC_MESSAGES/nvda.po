@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'Klavye Komutları Eğitimi 2.6'\n"
+"Project-Id-Version: 'Klavye Komutları Eğitimi'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2022-03-13 14:41+0300\n"
-"PO-Revision-Date: 2022-03-13 14:43+0300\n"
+"POT-Creation-Date: 2024-04-05 22:49+0300\n"
+"PO-Revision-Date: 2024-04-15 18:34+0300\n"
 "Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language-Team: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language: tr_TR\n"
@@ -16,63 +16,75 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../../globalPlugins\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: trainingKeyboardCommands/__init__.py:75
-#: trainingKeyboardCommands/__init__.py:76
-#: trainingKeyboardCommands/__init__.py:82
-#: trainingKeyboardCommands/__init__.py:83
+#. If the gesture or command equals "None", replace it with "Unassigned"
+#: addon\globalPlugins\trainingKeyboardCommands\__init__.py:92
+#: addon\globalPlugins\trainingKeyboardCommands\__init__.py:93
+#: addon\globalPlugins\trainingKeyboardCommands\__init__.py:103
 msgid "Description:"
 msgstr "Tanım:"
 
-#: trainingKeyboardCommands/__init__.py:101
+#. Translators: Script category for Training Keyboard Commands addon in input gestures dialog.
+#: addon\globalPlugins\trainingKeyboardCommands\__init__.py:137
 msgid "Training Keyboard Commands"
 msgstr "Klavye Komutları Eğitimi"
 
-#: trainingKeyboardCommands/__init__.py:111
+#. Translators: Message displayed in input help mode.
+#: addon\globalPlugins\trainingKeyboardCommands\__init__.py:145
 msgid "Display training keyboard Commands game dialog."
 msgstr "Klavye Komutları Eğitimi oyun iletişim ekranını görüntüle."
 
-#: trainingKeyboardCommands/game.py:48
+#. Translators: Title of the game
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:48
 msgid "Training Nvda Commands"
 msgstr "NVDA Komutları Eğitimi"
 
-#: trainingKeyboardCommands/game.py:61
+#. Translators: label for the score value at the beginning of the game
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:61
 msgid "Your Score: 0"
 msgstr "Puanın: 0"
 
-#: trainingKeyboardCommands/game.py:73
+#. Translators: label for the cumbo box of options for correct answer
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:73
 msgid "Choose Option"
 msgstr "Seçenek belirle"
 
-#: trainingKeyboardCommands/game.py:83
+#. Translators: label for the options of radio box, for desktop layout
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:83
 msgid "Desktop layout commands"
 msgstr "Masaüstü komutları"
 
-#: trainingKeyboardCommands/game.py:85
+#. Translators: label for the options of radio box, for laptop layout
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:85
 msgid "Laptop layout commands"
 msgstr "Dizüstü komutları"
 
-#: trainingKeyboardCommands/game.py:88
+#. Translators: label of radio box to choose type of keyboard commands to play
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:88
 msgid "Choose keyboard layout to train commands"
 msgstr "Komut eğitimi için klavye düzeni seç"
 
-#: trainingKeyboardCommands/game.py:96
+#. Translators: label of OK button
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:96
 msgid "Ok"
 msgstr "Tamam"
 
-#: trainingKeyboardCommands/game.py:100
+#. Translators: label ob Begin Play button
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:100
 msgid "Begin Play"
 msgstr "Oyuna Başla"
 
-#: trainingKeyboardCommands/game.py:104
+#. Translators: label of Exit button
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:104
 msgid "Exit"
-msgstr "çık"
+msgstr "Çık"
 
-#: trainingKeyboardCommands/game.py:137
+#. Translators: Message asking the user if he wishes to save remaining questions, to resume them in a later time.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:137
 msgid ""
 "Do you want to save remaining questions from this round;\n"
 "so that you can resume them later?"
@@ -80,15 +92,18 @@ msgstr ""
 "Daha sonra kaldığın yerden devam edebilmek için;\n"
 "bu turu kaydetmek istiyor musun?"
 
-#: trainingKeyboardCommands/game.py:140
+#. Translators: Title of message box.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:140
 msgid "Save Game"
 msgstr "Oyunu kaydet"
 
-#: trainingKeyboardCommands/game.py:169
+#. Translators: label for score value
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:169
 msgid "Your Score: {}/{}"
 msgstr "Puanın: {}/{}"
 
-#: trainingKeyboardCommands/game.py:178
+#. Translators: Message displayed upon hitting the wrong answer.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:178
 msgid ""
 "Wrong answer;\n"
 " No lose, go on."
@@ -96,15 +111,18 @@ msgstr ""
 "Yanlış cevap;\n"
 "Kaybetmek yok, devam et."
 
-#: trainingKeyboardCommands/game.py:181
+#. Translators: Title of message dialog.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:181
 msgid "Error Message"
 msgstr "Hata mesajı"
 
-#: trainingKeyboardCommands/game.py:189
+#. Translators: label of score
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:189
 msgid "Your Score: {}"
 msgstr "Puanın: {}"
 
-#: trainingKeyboardCommands/game.py:199
+#. Translators: Message displayed upon ending any round of game.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:199
 msgid ""
 "Congratulations;\n"
 " you have answered all questions and won;\n"
@@ -114,35 +132,42 @@ msgstr ""
 "tüm soruları cevapladın ve kazandın;\n"
 "başka bir turda veya oyunda görüşürüz."
 
-#: trainingKeyboardCommands/game.py:202
+#. Translators: title of message dialog.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:202
 msgid "End Of Game "
-msgstr "Oyunun Sonu"
+msgstr "Oyunun Sonu "
 
-#: trainingKeyboardCommands/game.py:206
+#. Translators: label of radio box to play again
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:206
 msgid "Choose layout and play again"
 msgstr "Düzen seç ve tekrar oyna"
 
-#: trainingKeyboardCommands/game.py:213
+#. Translators: Desktop layout mode
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:213
 msgid "Desktop layout"
 msgstr "Masaüstü düzeni"
 
-#: trainingKeyboardCommands/game.py:215
+#. Translators: Laptop layout mode
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:215
 msgid "Laptop layout"
 msgstr "Dizüstü düzeni"
 
-#: trainingKeyboardCommands/game.py:219
+#. Translators: Message displayed asking the user, if he wants to resume the previous round or not.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:219
 msgid ""
 "Questions preserved of previous round of same layout found,\n"
 "Do you want to resume the previous round?"
 msgstr ""
-"Bu düzen için daha önce kaydedilmiş bir tur bulundu,\n"
-"Kayıtlı turdan devam etmek ister misin?"
+"Aynı düzenin önceki turunda korunan sorular bulundu,\n"
+"Önceki tura devam etmek istiyor musun?"
 
-#: trainingKeyboardCommands/game.py:222
+#. Translators: Title of message dialog
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:222
 msgid "Resume Game"
 msgstr "Oyuna devam et"
 
-#: trainingKeyboardCommands/game.py:229
+#. Translators: message displayed at the begining of game, giving little informations about it.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:229
 msgid ""
 "Welcome To training nvda commands like game;\n"
 "We will ask you NVDA {} commands like questions;\n"
@@ -154,20 +179,41 @@ msgstr ""
 "Her soruda sunulan cevap seçeneklerinden doğru olanı seçmelisin.;\n"
 "O halde başlayalım!"
 
-#: trainingKeyboardCommands/game.py:232
+#. Translators: Title of welcome dialog.
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:232
 msgid "Welcome"
 msgstr "Hoş geldin"
 
-#: trainingKeyboardCommands/game.py:243
+#. Translators: label of score text upon resuming game
+#: addon\globalPlugins\trainingKeyboardCommands\game.py:243
 msgid "Your score: {}/{}"
 msgstr "Puanın: {}/{}"
 
-#~ msgid "Training Keyboards Commands"
-#~ msgstr "Klavye Komutları Eğitimi"
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+#: buildVars.py:23
+msgid "Training Keyboards Commands"
+msgstr "Klavye Komutları Eğitimi"
 
-#~ msgid ""
-#~ "This addon allows you to train NVDA commands in game like way, for either desktop or laptop layout mode.\n"
-#~ "For every commands and it's description, you have to choose the right keys or answer specific to it.\n"
-#~ "And if exiting before the end, you can save the remaining questions to resume them in later time.\n"
-#~ "In order to use the addon, you have to assign a gesture to it via NVDAmenu>preferences>inputGestures>trainingKeyboardCommands."
-#~ msgstr "Bu eklenti, masaüstü veya dizüstü klavye düzeni için NVDA komutlarıyla oyun içinde alıştırma yapmanı sağlar.Her komut ve açıklaması için doğru tuşları seçmeli veya ona özel cevap vermelisin.Oyun bitmeden çıkmak istersen daha sonra devam etmek için turu kaydedebilirsin..Eklentiyi kullanmak için NVDAmenü>Tercihler>Girdi Hareketleri>KlavyeKomutlarıEğitimi aracılığıyla ona bir hareket ataman gerekir."
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:26
+msgid ""
+"This addon allows you to train NVDA commands in game like way, for either "
+"desktop or laptop layout mode.\n"
+"For every commands and it's description, you have to choose the right keys "
+"or answer specific to it.\n"
+"And if exiting before the end, you can save the remaining questions to "
+"resume them in later time.\n"
+"In order to use the addon, you have to assign a gesture to it via "
+"NVDAmenu>preferences>inputGestures>trainingKeyboardCommands."
+msgstr ""
+"Bu eklenti, NVDA komutlarını masaüstü veya dizüstü bilgisayar düzeni için "
+"oyun şeklinde öğrenmeni sağlar.\n"
+"Her komut ile açıklaması için doğru tuşları seçmen veya ona özel cevabı "
+"vermen gerekir.\n"
+"Eğer oyun bitmeden çıkarsan, daha sonra devam etmek için kalan soruları "
+"kaydedebilirsin.\n"
+"Eklentiyi kullanabilmek için NVDA menüsü>tercihler>Girdi Hareketleri>Klavye "
+"Komutları Eğitimi aracılığıyla bir hareket ataman gerekir."

@@ -2,8 +2,7 @@
 
 *	Yazar: İbrahim Hamadeh  
 *	Katkıda Bulunanlar: Cary Rowen  
-*	İndir [Kararlı Sürüm][1]  
-*	İndir [geliştirici sürümü][2]  
+*	[Kararlı Sürümü indirin:][1]  
 *	NVDA Uyumluluğu: 2019.3 ve sonrası.  
 
 Bu eklenti, her iki klavye düzeni  için NVDA komutlarını oyun benzeri bir şekilde öğretmeyi amaçlamaktadır.  
@@ -21,6 +20,41 @@ NVDA menüsü>tercihler>Girdi Hareketleri>Klavye Komutları Eğitimi, yolunu kul
 *	Herhangi bir zamanda çıkmak isterseniz oynamakta olduğunuz turu kaydetmek isteyip istemediğiniz sorulacaktır.  
 *	Daha sonra oyuna başladığınızda, seçtiğiniz klavye düzeni için bir tur kayıtlıysa, o tura devam etmek isteyip istemediğiniz sorulacaktır.  
 *	Her iki düzende bulunan yaklaşık 95 adet sorunun hepsini doğru   cevaplarsanız NVDA kupasını kazanırsınız.  
+
+### 3.2.2 için değişiklikler ###
+
+*	Ângelo Abrantes katkılarıyla Portekizce dili eklendi.
+
+### 3.2.1 için değişiklikler ###
+
+*	Leonardo Marenda katkılarıyla İtalyanca dili eklendi.
+
+### 3.2 için değişiklikler ###
+
+*	En son test edilen sürüm güncellendi, böylece eklenti artık NVDA 2024.1 ile uyumludur.
+
+### 3.1 için değişiklikler ###
+
+*	BeautifulSoup paketi 4.12.2 sürümüne güncellendi.
+*	Eklenti yüklemesi yerine eklenti verileri oluşturmaya başlamak için core.postNvdaStartup kullanıldı.
+
+### 3.0 için değişiklikler ###
+
+*	En son NVDA 2023.3'teki Commands Quick Reference.html dosyasındaki değişikliklere göre alıntılanan tabloların dizini değiştirildi.
+*	Şimdi belirli uygulamalara özel komutlar için sorunun ilk satırı o uygulamaya atıfta bulunuyor.
+Örneğin Microsoft word komutlarında sorunun önüne "Microsoft word'de:" eklenir.
+
+### 2.9 için değişiklikler ###
+
+*	Eklenti mağazasında yayınlanan ilk sürüm.
+
+### 2.8 için değişiklikler ###
+
+*	NVDA 2023.1 ile uyumluluk için son test edilen sürüm 2023.1 olarak güncellendi.
+
+### 2.7 için değişiklikler ###
+
+*	Eklenti için Ukraynaca çeviri eklendi.
 
 ### 2.6 için değişiklikler ###
 
@@ -63,8 +97,4 @@ NVDA menüsü>tercihler>Girdi Hareketleri>Klavye Komutları Eğitimi, yolunu kul
 
 *	Care-rowen'a geri bildirimi ve eklentiye yeni sesler sağladığı için çok teşekkürler.  
 
-[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.5/trainingKeyboardCommands-2.5.nvda-addon
-
-[2]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/2.5-dev/trainingKeyboardCommands-2.5-dev.nvda-addon
-
-[3]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/v1.3dev/trainingKeyboardCommands-1.3-dev.nvda-addon
+[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/3.2.2/trainingKeyboardCommands-3.2.2.nvda-addon
