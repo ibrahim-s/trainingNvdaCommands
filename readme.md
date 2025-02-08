@@ -2,7 +2,7 @@
 
 *	Author: Ibrahim Hamadeh  
 *	Contributors: cary rowen
-*	Download [Stable Version 3.2.3][1]  
+*	Download [Development Version 3.2.4][1]  
 *	NVDA compatibility: 2019.3 and later  
 
 This addon is aimed to train NVDA commands in a game like way, for either keyboard layout modes  
@@ -103,4 +103,4 @@ For instance in Microsoft word commands, the question is prefixed with "In Micro
 
 *	Tanks a lot to cary-rowen, for his remarks and contributing the new sounds for the addon.  
 
-[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/3.2.3/trainingKeyboardCommands-3.2.3.nvda-addon
+[1]: https://github.com/ibrahim-s/trainingNvdaCommands/releases/download/3.2.4/trainingKeyboardCommands-3.2.4.nvda-addon

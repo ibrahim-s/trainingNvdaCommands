@@ -1,3 +1,3 @@
-### Changes for 3.2.3 ###
+### Changes for 3.2.4 ###
 
-*	Update Turkish translation, contributed by Umut KORKMAZ.
+*	Development version for testing with NVDA alpha.
