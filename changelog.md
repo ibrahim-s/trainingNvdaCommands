@@ -1,4 +1,3 @@
-### Changes for 3.2.5 ###
+### Changes for 3.2.6 ###
 
-*	Update last tested Version, thus make the addon compatible with NVDA 2025.1 Release.
-*	Slight adjustment of index of scraped tables, to include the new added commands.
+*	In tables with 3 columns, if the command is "None", replace it with "unassigned".

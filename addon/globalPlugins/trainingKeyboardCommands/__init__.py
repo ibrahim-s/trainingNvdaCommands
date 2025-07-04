@@ -99,7 +99,7 @@ def scrapRequiredData():
 				prefix= getPrefixForTable(table)
 				commandName= cells[0].get_text()
 				commandDescription= cells[-1].get_text()
-				commandKey = cells[1].get_text()
+				commandKey = cells[1].get_text() if cells[1].get_text().lower() != "none" else "Unassigned"
 				question = (prefix+ commandName + ';\n' +_("Description:") + '\n'+commandDescription, commandKey)
 				desktopQuestions.append(question)
 				labtopQuestions.append(question)
