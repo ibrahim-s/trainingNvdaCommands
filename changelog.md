@@ -1,3 +1,1 @@
-### Changes for 3.2.6 ###
-
-*	In tables with 3 columns, if the command is "None", replace it with "unassigned".
+Use this file to explain what has changed in your add-on since the previous release. This will be included automatically in the release description when used with GitHub actions.
