@@ -1,1 +1,4 @@
-Use this file to explain what has changed in your add-on since the previous release. This will be included automatically in the release description when used with GitHub actions.
+### Changes for 3.2.7 ###
+
+*	Update addon template files.
+*	Update index of scraped tables, to fit with keyCommands in NVDA 2026.1.
