@@ -1,4 +1,3 @@
-### Changes for 3.2.7 ###
+### Changes for 3.2.8 ###
 
-*	Update addon template files.
-*	Update index of scraped tables, to fit with keyCommands in NVDA 2026.1.
+*	Update last tested version, to comply with NVDA 2026.1 addon api.

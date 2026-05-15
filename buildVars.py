@@ -26,15 +26,15 @@ For every commands and it's description, you have to choose the right keys or an
 And if exiting before the end, you can save the remaining questions to resume them in later time.
 In order to use the addon, you have to assign a gesture to it via NVDAmenu>preferences>inputGestures>trainingKeyboardCommands."""),
 	# version
-	addon_version="3.2.7",
+	addon_version="3.2.8",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""Update addon template files.
-Update the index of scraped tables, to fit with NVDA 2026.1."""),
+	addon_changelog=_("""- Update last tested version, to comply with NVDA 2026.1 addon api.
+"""),
 	# Author(s)
 	addon_author="ibrahim hamadeh <ibra.hamadeh@hotmail.com>",
 	# URL for the add-on documentation support
-	addon_url="https://github.com/ibrahim-s/trainingNvdaCommands/blob/master/readme.md",
+	addon_url="https://github.com/ibrahim-s/trainingNvdaCommands",
 	# URL for the add-on repository where the source code can be found
 	addon_sourceURL="https://github.com/ibrahim-s/trainingNvdaCommands",
 	# Documentation file name
